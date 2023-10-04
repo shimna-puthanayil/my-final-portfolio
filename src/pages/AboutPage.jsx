@@ -9,6 +9,7 @@ import {
   Avatar,
 } from "@chakra-ui/react";
 export default function AboutPage() {
+  const fontColor = "rgb(217, 185, 121)";
   const size = "300px";
   const color = "#2D3748";
   const pulseRing = keyframes`
@@ -39,7 +40,7 @@ export default function AboutPage() {
         fontWeight={500}
         my={50}
         mt={2}
-        color=" rgb(217, 185, 121)"
+        color={fontColor}
       >
         About Me
       </Heading>
@@ -70,7 +71,7 @@ export default function AboutPage() {
           top={0}
         />
       </Box>
-      <Text fontSize={"lg"} mt={50} color=" rgb(217, 185, 121)">
+      <Text fontSize={"lg"} mt={50} color={fontColor}>
         I love coding and I aspire to become a good developer. I am passionate
         about learning new technologies. I am very happy that I am doing a
         course in coding that will empower me to achieve my goals. I love

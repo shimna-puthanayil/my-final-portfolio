@@ -8,11 +8,12 @@ import {
 } from "@chakra-ui/react";
 //Importing the required component for linking between pages
 
-import Project from "../components/UI/ProfileSections/Project";
+import Project from "../components/UI/ProjectSections/Project";
 
 import projectsInfo from "../utils/projectsInfo";
 
 export default function HomePage() {
+  const fontColor = "rgb(217, 185, 121)";
   //  react hooks
 
   const [projects, setProjects] = useState([]);
@@ -30,7 +31,12 @@ export default function HomePage() {
     <>
       <Container maxW="1100px" height={"auto"} bg="black" centerContent>
         <Stack pt={1} align={"center"} mt={5}>
-          <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
+          <Heading
+            fontSize={"2xl"}
+            fontFamily={"body"}
+            fontWeight={500}
+            color={fontColor}
+          >
             Portfolio
           </Heading>
         </Stack>
