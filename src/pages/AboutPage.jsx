@@ -3,7 +3,6 @@ import profilePic from "../images/pro-photo.jpg";
 import {
   Container,
   Heading,
-  Image,
   Text,
   keyframes,
   Box,
@@ -12,7 +11,6 @@ import {
 export default function AboutPage() {
   const size = "300px";
   const color = "#2D3748";
-
   const pulseRing = keyframes`
   0%{transform:scale(0.001);}
   40%
