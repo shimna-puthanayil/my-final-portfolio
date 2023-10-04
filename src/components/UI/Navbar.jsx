@@ -20,7 +20,15 @@ export default function Nav({ links }) {
         boxSize={100}
         width="100%"
       >
-        <Center bg="gray.900" h="50px">
+        <Center
+          bg="gray.900"
+          h="50px"
+          borderRadius="full"
+          p={5}
+          ml={{ base: "initial", md: 4 }}
+          mt={{ base: 10, md: "initial" }}
+          w="300px"
+        >
           <Heading
             fontSize={"2xl"}
             fontFamily={"body"}
