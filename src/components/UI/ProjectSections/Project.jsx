@@ -1,3 +1,4 @@
+import { Flex } from "@chakra-ui/layout";
 import {
   Box,
   Center,
@@ -31,7 +32,7 @@ export default function Project({
           ]}
           _groupHover={{
             before: {
-              filter: "blur(50px)",
+              filter: "blur(100px)",
             },
           }}
           boxShadow={"2xl"}
@@ -49,7 +50,7 @@ export default function Project({
               {name}
             </Heading>
           </Stack>
-          <Box
+          <Flex
             rounded={"lg"}
             mt={-12}
             pos={"relative"}
@@ -60,10 +61,12 @@ export default function Project({
               content: '""',
               w: "full",
               h: "full",
+
               pos: "absolute",
               top: 70,
               left: 0,
-              backgroundImage: `url("images/wb.png")`,
+              background: `url("images/wb.png") center/contain`,
+              backgroundSize: "auto",
               filter: "blur(5px)",
               zIndex: -1,
             }}
@@ -76,15 +79,16 @@ export default function Project({
           >
             <Link href={deploymentLink} isExternal>
               <Image
+                mt={73}
                 rounded={"lg"}
-                height={400}
+                height={252}
                 width={500}
-                objectFit={"contain"}
+                objectFit={"cover"}
                 src={url}
                 alt="Project Photos"
               />
             </Link>
-          </Box>
+          </Flex>
           <VStack
             direction={["column", "row"]}
             spacing="1"

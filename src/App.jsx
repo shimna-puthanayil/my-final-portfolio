@@ -6,7 +6,8 @@ function App() {
     <>
       <ChakraProvider>
         <Nav />
-        <GridItem bg="black" area={"main"} h="container.xl">
+
+        <GridItem bg="black" area={"main"} minHeight="100vh" h="auto" pb={20}>
           <Outlet />
         </GridItem>
       </ChakraProvider>

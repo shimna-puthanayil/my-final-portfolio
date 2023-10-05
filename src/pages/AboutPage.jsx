@@ -32,6 +32,7 @@ export default function AboutPage() {
         "linear(to-b, gray.900, gray.700)",
       ]}
       p={50}
+      h="container.2xl"
     >
       <Heading
         fontSize={"2xl"}
@@ -77,8 +78,6 @@ export default function AboutPage() {
         photography as a hobby. I believe this can help me to design websites
         that are more visually asthetic.
       </Text>
-
-      <span class="border_btm"></span>
     </Container>
   );
 }

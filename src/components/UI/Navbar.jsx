@@ -16,63 +16,87 @@ export default function Nav({ links }) {
         spacing="24px"
         align="center"
         justify={{ base: "center", md: "space-between" }}
+        height={{ base: 200, md: 100 }}
         bg={"gray.700"}
-        boxSize={100}
         width="100%"
-        _groupHover={{
-          before: {
-            filter: "blur(100px)",
-          },
-        }}
-        boxShadow={"2xl"}
-        pos={"relative"}
-        zIndex={1}
+        // _groupHover={{
+        //   before: {
+        //     filter: "blur(100px)",
+        //   },
+        // }}
+        // pos={"relative"}
+        // zIndex={1}
       >
         <Box
-          rounded={"lg"}
-          h="50px"
-          w="300px"
-          _after={{
-            transition: "all .4s ease",
-            content: '""',
-            h: "44px",
-            w: "300px",
-            pos: "absolute",
-            top: 7,
-            left: 4,
-            backgroundImage: `url("images/wb.png")`,
-            borderRadius: "full",
-            filter: "blur(10px)",
-            zIndex: -1,
-          }}
+          role={"group"}
+          spacing="24px"
+          align="center"
+          // justify={{ base: "center", md: "space-between" }}
+          bg={"gray.700"}
+          boxSize={100}
+          // width="100%"
           _groupHover={{
-            _after: {
-              pos: "absolute",
+            before: {
               filter: "blur(100px)",
             },
           }}
+          pos={"relative"}
+          zIndex={1}
         >
-          <Center
-            bg="gray.900"
+          <Box
+            // justify={{ base: "center", md: "space-between" }}
+            // ml={{ base: "initial", md:-3 }}
+            // mt={{ base: 0, md: "initial" }}
             h="50px"
-            borderRadius="full"
-            p={5}
-            ml={{ base: "initial", md: 4 }}
-            mt={{ base: 10, md: "initial" }}
             w="300px"
+            pos={"relative"}
+            _after={{
+              transition: "all .4s ease",
+              content: '""',
+              w: "full",
+              h: "full",
+              pos: "absolute",
+              top: 7,
+              left: 4,
+              backgroundImage: `url("images/wb.png")`,
+              ml: { base: "-110px", md: "15px" },
+              // mt: { base: 10, md: 7 },
+              mt: { base: -7, md: -7 },
+              borderRadius: "full",
+              filter: "blur(10px)",
+              zIndex: -1,
+            }}
+            _groupHover={{
+              _after: {
+                pos: "absolute",
+                filter: "blur(100px)",
+              },
+            }}
           >
-            <Heading
-              fontSize={"2xl"}
-              fontFamily={"body"}
-              fontWeight={500}
-              color=" rgb(217, 185, 121)"
+            <Center
+              bg="gray.900"
+              h="50px"
+              borderRadius="full"
+              p={5}
+              ml={{ base: "-190px", sm: "-190px", md: "30px" }}
+              mt={{ base: 10, sm: 10, md: 7 }}
+           
+              // align="center"
+              w="300px"
             >
-              Shimna Puthanayil
-            </Heading>
-          </Center>
+              <Heading
+                fontSize={"2xl"}
+                fontFamily={"body"}
+                fontWeight={500}
+                color=" rgb(217, 185, 121)"
+              >
+                Shimna Puthanayil
+              </Heading>
+            </Center>
+          </Box>
         </Box>
-        <Box bg="green.400">
-          <Breadcrumb separator=" " bg={"gray.700"} display="flex" px={50}>
+        <Box>
+          <Breadcrumb separator=" " display="flex" px={50}>
             {links.map((link) => (
               <BreadcrumbItem color=" rgb(217, 185, 121)">
                 {link}
