@@ -1,4 +1,3 @@
-// This is a static page mocking an "About Us" section for our fake user data
 import profilePic from "../images/pro-photo.jpg";
 import {
   Container,
