@@ -38,8 +38,7 @@ export default function AboutPage() {
         fontFamily={"body"}
         fontWeight={500}
         mb={50}
-        
-        pt={102}
+        mt={20}
         color={fontColor}
       >
         About Me

@@ -12,7 +12,6 @@ export default function Nav({ links }) {
   return (
     <>
       <Stack
-        Flex
         as="header"
         position="fixed"
         direction={["column", "row"]}
@@ -53,7 +52,6 @@ export default function Nav({ links }) {
 
               backgroundImage: `url("images/wb.png")`,
               ml: { base: "-115px", md: "15px" },
-              // mt: { base: 10, md: 7 },
               mt: { base: -7, md: -7 },
               borderRadius: "full",
               filter: "blur(10px)",
