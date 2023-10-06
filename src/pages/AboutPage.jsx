@@ -7,6 +7,8 @@ import {
   Box,
   Avatar,
 } from "@chakra-ui/react";
+import TextAnimation from "../components/UI/TextAnimation";
+
 export default function AboutPage() {
   const fontColor = "rgb(217, 185, 121)";
   const size = "300px";
@@ -26,11 +28,7 @@ export default function AboutPage() {
       maxW="1100px"
       centerContent
       className="corner"
-      bgGradient={[
-        "linear(to-tr, gray.200, gray.500)",
-        "linear(to-t, gray.200, black.500)",
-        "linear(to-b, gray.900, gray.700)",
-      ]}
+      bgGradient={["linear(to-b, gray.900, gray.700)"]}
       p={50}
       h="container.2xl"
     >
@@ -71,8 +69,9 @@ export default function AboutPage() {
           top={0}
         />
       </Box>
-      <Text fontSize={"lg"} mt={50} color={fontColor}>
-        I love coding and I aspire to become a good developer. I am passionate
+      <TextAnimation />
+      <Text fontSize={"lg"} mt={22} color="#ccd6db">
+        I love coding and I aspire to become a web developer. I am passionate
         about learning new technologies. I am very happy that I am doing a
         course in coding that will empower me to achieve my goals. I love
         photography as a hobby. I believe this can help me to design websites

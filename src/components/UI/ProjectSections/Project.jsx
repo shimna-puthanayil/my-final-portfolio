@@ -25,11 +25,7 @@ export default function Project({
           maxW={"500px"}
           height={"470px"}
           w={"full"}
-          bgGradient={[
-            "linear(to-tr, gray.200, gray.500)",
-            "linear(to-t, gray.200, black.500)",
-            "linear(to-b, gray.900, gray.700)",
-          ]}
+          bgGradient={["linear(to-b, gray.900, gray.700)"]}
           _groupHover={{
             before: {
               filter: "blur(100px)",

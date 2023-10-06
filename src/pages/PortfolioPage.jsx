@@ -1,4 +1,3 @@
-"use client";
 import { useState, useEffect } from "react";
 import {
   SimpleGrid,
@@ -13,7 +12,7 @@ import Project from "../components/UI/ProjectSections/Project";
 
 import projectsInfo from "../utils/projectsInfo";
 
-export default function HomePage() {
+export default function PortfolioPage() {
   const fontColor = "rgb(217, 185, 121)";
   //  react hooks
 
@@ -43,8 +42,8 @@ export default function HomePage() {
         </Stack>
         <Divider orientation="horizontal" mt={5} borderColor="gray.600" />
         <SimpleGrid columns={[1, null, 2]} spacing={8}>
-          {projects.map((project) => (
-            <Project project={project} />
+          {projects.map((project, i) => (
+            <Project key={i} project={project} />
           ))}
         </SimpleGrid>
       </Container>

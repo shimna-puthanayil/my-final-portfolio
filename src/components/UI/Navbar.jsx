@@ -19,22 +19,13 @@ export default function Nav({ links }) {
         height={{ base: 200, md: 100 }}
         bg={"gray.700"}
         width="100%"
-        // _groupHover={{
-        //   before: {
-        //     filter: "blur(100px)",
-        //   },
-        // }}
-        // pos={"relative"}
-        // zIndex={1}
       >
         <Box
           role={"group"}
           spacing="24px"
           align="center"
-          // justify={{ base: "center", md: "space-between" }}
           bg={"gray.700"}
           boxSize={100}
-          // width="100%"
           _groupHover={{
             before: {
               filter: "blur(100px)",
@@ -44,9 +35,6 @@ export default function Nav({ links }) {
           zIndex={1}
         >
           <Box
-            // justify={{ base: "center", md: "space-between" }}
-            // ml={{ base: "initial", md:-3 }}
-            // mt={{ base: 0, md: "initial" }}
             h="50px"
             w="300px"
             pos={"relative"}
@@ -58,8 +46,9 @@ export default function Nav({ links }) {
               pos: "absolute",
               top: 7,
               left: 4,
+
               backgroundImage: `url("images/wb.png")`,
-              ml: { base: "-110px", md: "15px" },
+              ml: { base: "-115px", md: "15px" },
               // mt: { base: 10, md: 7 },
               mt: { base: -7, md: -7 },
               borderRadius: "full",
@@ -78,9 +67,8 @@ export default function Nav({ links }) {
               h="50px"
               borderRadius="full"
               p={5}
-              ml={{ base: "-190px", sm: "-190px", md: "30px" }}
+              ml={{ base: "-200px", md: "30px" }}
               mt={{ base: 10, sm: 10, md: 7 }}
-           
               // align="center"
               w="300px"
             >
@@ -97,8 +85,8 @@ export default function Nav({ links }) {
         </Box>
         <Box>
           <Breadcrumb separator=" " display="flex" px={50}>
-            {links.map((link) => (
-              <BreadcrumbItem color=" rgb(217, 185, 121)">
+            {links.map((link, i) => (
+              <BreadcrumbItem key={i} color=" rgb(217, 185, 121)">
                 {link}
               </BreadcrumbItem>
             ))}
