@@ -30,7 +30,7 @@ export default function PortfolioPage() {
   return (
     <>
       <Container maxW="1100px" height={"auto"} bg="black" centerContent>
-        <Stack pt={1} align={"center"} mt={5}>
+        <Stack align={"center"} mt={12} pb={10} pt={102}>
           <Heading
             fontSize={"2xl"}
             fontFamily={"body"}
@@ -39,13 +39,14 @@ export default function PortfolioPage() {
           >
             Portfolio
           </Heading>
+
+          <Divider orientation="horizontal" mt={5} borderColor="gray.600" />
+          <SimpleGrid columns={[1, null, 2]} spacing={8}>
+            {projects.map((project, i) => (
+              <Project key={i} project={project} />
+            ))}
+          </SimpleGrid>
         </Stack>
-        <Divider orientation="horizontal" mt={5} borderColor="gray.600" />
-        <SimpleGrid columns={[1, null, 2]} spacing={8}>
-          {projects.map((project, i) => (
-            <Project key={i} project={project} />
-          ))}
-        </SimpleGrid>
       </Container>
     </>
   );

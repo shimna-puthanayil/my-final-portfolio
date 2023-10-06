@@ -97,14 +97,14 @@ export default function Project({
                 fontSize={"sm"}
                 pb={"10px"}
                 align={"center"}
-                color={fontColor}
+                color="#ccd6db"
               >
                 {description}
               </Text>
             </Box>
             <Box h="30px" align={"center"} pt={1}>
               <Link href={gitHubLink} isExternal>
-                <FaGithub size={"20px"} color="#718096" />
+                <FaGithub size={"20px"} color={"#a5b5bc"} />
               </Link>
             </Box>
           </VStack>

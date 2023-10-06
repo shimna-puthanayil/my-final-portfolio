@@ -12,6 +12,9 @@ export default function Nav({ links }) {
   return (
     <>
       <Stack
+        Flex
+        as="header"
+        position="fixed"
         direction={["column", "row"]}
         spacing="24px"
         align="center"
@@ -19,6 +22,7 @@ export default function Nav({ links }) {
         height={{ base: 200, md: 100 }}
         bg={"gray.700"}
         width="100%"
+        zIndex={2}
       >
         <Box
           role={"group"}
@@ -86,7 +90,7 @@ export default function Nav({ links }) {
         <Box>
           <Breadcrumb separator=" " display="flex" px={50}>
             {links.map((link, i) => (
-              <BreadcrumbItem key={i} color=" rgb(217, 185, 121)">
+              <BreadcrumbItem key={i} color=" #ccd6db">
                 {link}
               </BreadcrumbItem>
             ))}

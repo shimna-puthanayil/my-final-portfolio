@@ -25,6 +25,7 @@ export default function AboutPage() {
 `;
   return (
     <Container
+      as="main"
       maxW="1100px"
       centerContent
       className="corner"
@@ -36,8 +37,9 @@ export default function AboutPage() {
         fontSize={"2xl"}
         fontFamily={"body"}
         fontWeight={500}
-        my={50}
-        mt={2}
+        mb={50}
+        
+        pt={102}
         color={fontColor}
       >
         About Me
