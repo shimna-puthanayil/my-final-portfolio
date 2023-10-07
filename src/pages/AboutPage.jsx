@@ -28,7 +28,8 @@ export default function AboutPage() {
       as="main"
       maxW="1100px"
       centerContent
-      className="corner"
+      borderBottomLeftRadius={80}
+      borderBottomRightRadius={80}
       bgGradient={["linear(to-b, gray.900, gray.700)"]}
       p={50}
       h="container.2xl"

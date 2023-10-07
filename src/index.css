@@ -1,13 +1,14 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
+/* To change the background color and text color of auto filled input fields  */
+
+input:-internal-autofill-selected {
+  -webkit-box-shadow: 0 0 0 30px #171923 inset !important;
+  -webkit-text-fill-color: #ccd6db !important;
 }
 
-
-
-.corner {
-  border-bottom-left-radius: 80px 80px;
-  border-bottom-right-radius: 80px 80px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #171923 inset !important;
+  -webkit-text-fill-color: #ccd6db !important;
 }

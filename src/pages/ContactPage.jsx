@@ -70,19 +70,23 @@ export default function ContactPage() {
       >
         <Box>
           <VStack
-            spacing={{ base: 4, md: 8, lg: 20 }}
+            spacing={{ base: 4, md: 20, lg: 20 }}
             borderRadius="lg"
-            bgGradient={["linear(to-b, gray.900, gray.700)"]}
+            bgGradient={{
+              md: "linear(to-b, gray.900, gray.700)",
+              base: "black",
+            }}
             mt={90}
-            w="2xl"
+            w={{ base: "auto", md: "2xl", lg: "2xl" }}
             pt={50}
             pb={20}
           >
             <Heading
-              fontSize={{ base: "xl", md: "2xl" }}
+              fontSize={{ base: "2xl", md: "2xl" }}
               fontFamily={"body"}
               fontWeight={500}
               color={headingColor}
+              mt={{ base: 9, md: 1 }}
             >
               Contact Me
             </Heading>
@@ -97,8 +101,9 @@ export default function ContactPage() {
                 p={8}
                 color={useColorModeValue("gray.700", "whiteAlpha.900")}
                 shadow="base"
-                w="600px"
-                mt={-10}
+                // w="600px"
+                w={{ base: "auto", md: "600px", lg: "600px" }}
+                mt={{ base: 0, md: -10 }}
               >
                 <VStack spacing={5}>
                   <Formik
@@ -129,7 +134,8 @@ export default function ContactPage() {
                                 <Input
                                   {...field}
                                   placeholder="name"
-                                  w={500}
+                                  // w={500}
+                                  w={{ base: "auto", md: "500px", lg: "500px" }}
                                   color={fontColor}
                                   borderColor={borderColor}
                                   _focusVisible={{
