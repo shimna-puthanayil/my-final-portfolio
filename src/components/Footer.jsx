@@ -16,13 +16,13 @@ export default function Footer() {
         bg={"gray.900"}
       >
         <Link href={gitHubLink} ml={2} isExternal>
-          <FaGithub size={"20px"} color={"rgb(217, 185, 121)"} />
+          <FaGithub size={"22px"} color={"rgb(217, 185, 121)"} />
         </Link>
         <Link href={linkedInLink} ml={2} isExternal>
-          <FaLinkedin size={"20px"} color={"rgb(217, 185, 121)"} />
+          <FaLinkedin size={"22px"} color={"rgb(217, 185, 121)"} />
         </Link>
         <Link href={twitterLink} ml={2} isExternal>
-          <FaTwitter size={"20px"} color={"rgb(217, 185, 121)"} />
+          <FaTwitter size={"22px"} color={"rgb(217, 185, 121)"} />
         </Link>
       </HStack>
     </>
