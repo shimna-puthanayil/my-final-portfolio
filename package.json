@@ -1,18 +1,19 @@
 {
   "name": "my-final-portfolio",
-  "homepage": "https://github.com/shimna-puthanayil/my-final-portfolio/"
+  "homepage": "https://github.com/shimna-puthanayil/my-final-portfolio/",
   "version": "1.0.0",
   "description": "",
   "main": "vite.config.js",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build" ,
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "dev": "vite",
-    "start": "vite",
-    "build": "vite build",
     "preview": "vite preview"
-  
   },
   "keywords": [],
   "author": "",
