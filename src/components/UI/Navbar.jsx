@@ -71,7 +71,6 @@ export default function Nav({ links }) {
               p={5}
               ml={{ base: "-200px", md: "30px" }}
               mt={{ base: 10, sm: 10, md: 7 }}
-              // align="center"
               w="300px"
             >
               <Heading
