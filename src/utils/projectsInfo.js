@@ -27,29 +27,28 @@ const getProjects = () => {
       gitHubLink: "https://github.com/shimna-puthanayil/tech-diary-m-v-c",
     },
     {
-      name: "CodeQuiz",
-      url: "images/quiz.jpeg",
-      deploymentLink: "https://shimna-puthanayil.github.io/code-quiz/",
+      name: "JATE",
+      url: "images/jate.jpeg",
+      deploymentLink: "https://stark-stream-59161-d25cfda68e94.herokuapp.com/",
       description:
-        "The project helps to build a timed coding quiz that stores high scores.",
-      gitHubLink: "https://github.com/shimna-puthanayil/code-quiz",
-    },
-    {
-      name: "TechBlog",
-      url: "images/tb.jpeg",
-      deploymentLink:
-        "https://murmuring-shelf-04632-c5a4a7d4538b.herokuapp.com/",
-      description:
-        "The project is a CMS-style blog site where developers can publish their blog posts and comment on other developers’ posts as well. They can also update or delete their posts. ",
-      gitHubLink: "https://github.com/shimna-puthanayil/tech-diary-m-v-c",
+        "This single-page application builds a text editor that runs in the browser and meets the PWA criteria ",
+      gitHubLink: "https://github.com/shimna-puthanayil/my-text-pad",
     },
     {
       name: "CodeQuiz",
       url: "images/quiz.jpeg",
       deploymentLink: "https://shimna-puthanayil.github.io/code-quiz/",
       description:
-        "The project helps to build a timed coding quiz that stores high scores.",
+        "The application helps to build a timed coding quiz that stores high scores.",
       gitHubLink: "https://github.com/shimna-puthanayil/code-quiz",
+    },
+
+    {
+      name: "Portfolio",
+      url: "images/portfolio.jpeg",
+      deploymentLink: "https://shimna-puthanayil.github.io/my-final-portfolio/",
+      description: "This application helps to build a portfolio using React.",
+      gitHubLink: "https://github.com/shimna-puthanayil/my-final-portfolio",
     },
   ];
   return projects;
