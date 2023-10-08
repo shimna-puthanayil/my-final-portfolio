@@ -30,7 +30,12 @@ export default function PortfolioPage() {
   return (
     <>
       <Container maxW="1100px" height={"auto"} bg="black" centerContent>
-        <Stack align={"center"} mt={12} pb={10} pt={102}>
+        <Stack
+          align={"center"}
+          mt={{ base: "152px", md: "50px" }}
+          pb={10}
+          pt={102}
+        >
           <Heading
             fontSize={"2xl"}
             fontFamily={"body"}

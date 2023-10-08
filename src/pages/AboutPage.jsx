@@ -39,7 +39,7 @@ export default function AboutPage() {
         fontFamily={"body"}
         fontWeight={500}
         mb={50}
-        mt={20}
+        mt={{ base: "202px", md: "100px" }}
         color={fontColor}
       >
         About Me

@@ -9,6 +9,7 @@ import {
   Link,
   VStack,
   StackDivider,
+  Divider,
 } from "@chakra-ui/react";
 
 import { FaGithub } from "react-icons/fa6";
@@ -23,7 +24,7 @@ export default function Project({
           role={"group"}
           p={6}
           maxW={"500px"}
-          height={"470px"}
+          height={{ base: "533", md: "485px" }}
           w={"full"}
           bgGradient={["linear(to-b, gray.900, gray.700)"]}
           _groupHover={{
@@ -87,8 +88,7 @@ export default function Project({
           </Flex>
           <VStack
             direction={["column", "row"]}
-            spacing="1"
-            divider={<StackDivider borderColor="gray.700" />}
+            spacing={{ base: "1", md: "1" }}
             align="stretch"
             pt={"90px"}
           >
@@ -98,10 +98,16 @@ export default function Project({
                 pb={"10px"}
                 align={"center"}
                 color="#ccd6db"
+                mb={10}
               >
                 {description}
               </Text>
             </Box>
+            <Divider
+              borderColor="gray.600"
+              mt={{ base: 12, md: 1 }}
+              mb={{ base: 1, md: 1 }}
+            />
             <Box h="30px" align={"center"} pt={1}>
               <Link href={gitHubLink} isExternal>
                 <FaGithub size={"20px"} color={"#a5b5bc"} />

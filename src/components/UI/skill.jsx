@@ -4,11 +4,11 @@ export default function App({ skills, title }) {
   return (
     <>
       <Heading
-        fontSize={{ base: "sm", md: "2xl" }}
+        fontSize={{ base: "xl", md: "xl" }}
         fontFamily={"body"}
         fontWeight={500}
         color={headingColor}
-        mt={{ base: 9, md: 1 }}
+        mt={{ base: 1, md: 1 }}
         mb={2}
       >
         {title}
