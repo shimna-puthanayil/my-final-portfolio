@@ -214,7 +214,7 @@ export default function ContactPage() {
                           colorScheme="black"
                           isLoading={props.isSubmitting}
                           type="submit"
-                          bgGradient={["linear(to-b, gray.500, gray.700)"]}
+                          bgGradient={["linear(to-b, gray.600, gray.800)"]}
                           color={fontColor}
                           borderRadius="full"
                           _hover={{
