@@ -17,7 +17,7 @@ const commonStyles = {
   height: "12",
   display: "flex",
 };
-export default function App() {
+export default function TextAnimation() {
   return (
     <Container
       w="100"

@@ -8,7 +8,6 @@ import {
   Image,
   Link,
   VStack,
-  StackDivider,
   Divider,
 } from "@chakra-ui/react";
 

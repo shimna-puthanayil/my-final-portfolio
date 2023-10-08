@@ -31,7 +31,7 @@ export default function AboutPage() {
       borderBottomLeftRadius={80}
       borderBottomRightRadius={80}
       bgGradient={["linear(to-b, gray.900, gray.700)"]}
-      p={50}
+      p={{ base: 30, md: 50 }}
       h="container.2xl"
     >
       <Heading
@@ -39,7 +39,7 @@ export default function AboutPage() {
         fontFamily={"body"}
         fontWeight={500}
         mb={50}
-        mt={{ base: "202px", md: "100px" }}
+        mt={{ base: "220px", md: "100px" }}
         color={fontColor}
       >
         About Me

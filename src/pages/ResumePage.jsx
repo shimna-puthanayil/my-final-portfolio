@@ -2,21 +2,12 @@ import Skill from "../components/UI/skill";
 //importing CHAKRA UI components
 import {
   Box,
-  FormErrorMessage,
-  Button,
   Flex,
-  FormControl,
-  FormLabel,
   Heading,
-  Input,
-  InputGroup,
-  InputLeftElement,
   Stack,
-  Textarea,
   useColorModeValue,
   VStack,
   Link,
-  Center,
 } from "@chakra-ui/react";
 import resumePath from "./assets/Resume.pdf";
 import skillsInfo from "../utils/skillsInfo";
