@@ -1,14 +1,12 @@
-import { Center } from "@chakra-ui/layout";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Stack,
-  Flex,
-  Heading,
-  Box,
-} from "@chakra-ui/react";
-
-export default function Nav({ links }) {
+import { useState } from "react";
+// Bringing in the required import from 'react-router-dom'
+import { Link } from "react-router-dom";
+import Navigation from "./UI/Navigation";
+import { Stack, Heading, Box, Center } from "@chakra-ui/react";
+export default function Header() {
+  const [currentPage, setCurrentPage] = useState("AboutMe");
+  const handlePageChange = (page) => setCurrentPage(page);
+  // The Navbar UI component will render each of the Link elements in the links prop
   return (
     <>
       <Stack
@@ -85,13 +83,24 @@ export default function Nav({ links }) {
           </Box>
         </Box>
         <Box>
-          <Breadcrumb separator=" " display="flex" px={50}>
-            {links.map((link, i) => (
-              <BreadcrumbItem key={i} color=" #ccd6db">
-                {link}
-              </BreadcrumbItem>
-            ))}
-          </Breadcrumb>
+          <Navigation
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+            links={[
+              <Link key={1} to="/">
+                About
+              </Link>,
+              <Link key={2} to="/Portfolio">
+                Portfolio
+              </Link>,
+              <Link key={3} to="/Contact">
+                Contact
+              </Link>,
+              <Link key={4} to="/Resume">
+                Resume
+              </Link>,
+            ]}
+          />
         </Box>
       </Stack>
     </>

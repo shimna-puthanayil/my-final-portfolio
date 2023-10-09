@@ -64,14 +64,14 @@ export default function ResumePage() {
             color={fontColor}
             mt={{ base: "70px", md: "0px" }}
           >
-            Download my
+            Download My
             <Link
               href={resumePath}
               download="Resume"
               color={headingColor}
               ml={2}
             >
-              resume
+              Resume
             </Link>
           </Heading>
 
