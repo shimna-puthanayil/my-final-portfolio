@@ -46,7 +46,7 @@ const getProjects = () => {
     {
       name: "Portfolio",
       url: "images/portfolio.jpeg",
-      deploymentLink: "https://shimna-puthanayil.github.io/my-final-portfolio/",
+      deploymentLink: "https://dapper-empanada-1db9b0.netlify.app/",
       description: "This application helps to build a portfolio using React.",
       gitHubLink: "https://github.com/shimna-puthanayil/my-final-portfolio",
     },
