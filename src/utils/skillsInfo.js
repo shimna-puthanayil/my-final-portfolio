@@ -1,3 +1,4 @@
+//This function returns the front end skills to display in the section 'Resume'
 const getFrontEndSkills = () => {
   const frontEndSkills = [
     "HTML",
@@ -12,6 +13,7 @@ const getFrontEndSkills = () => {
   ];
   return frontEndSkills;
 };
+//This function returns the back end skills to display in the section 'Resume'
 const getBackEndSkills = () => {
   const backEndSkills = [
     "Node",
@@ -20,7 +22,6 @@ const getBackEndSkills = () => {
     "MySQL Sequalize",
     "MongoDB Mongoose",
     "GraphQL",
-    
   ];
   return backEndSkills;
 };

@@ -1,4 +1,6 @@
+//importing CHAKRA UI components
 import { Box, Container, keyframes, HStack, VStack } from "@chakra-ui/react";
+//import motion for animation
 import { motion } from "framer-motion";
 
 const animationKeyframes = keyframes`
@@ -17,6 +19,7 @@ const commonStyles = {
   height: "12",
   display: "flex",
 };
+//this component TextAnimation is rendered in 'About Me ' section
 export default function TextAnimation() {
   return (
     <Container

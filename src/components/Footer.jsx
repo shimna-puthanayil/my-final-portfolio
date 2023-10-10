@@ -1,3 +1,4 @@
+//importing CHAKRA UI components
 import { HStack, Link } from "@chakra-ui/react";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa6";
 
@@ -10,7 +11,6 @@ export default function Footer() {
     <>
       <HStack
         display="flex"
-        // alignItems="center"
         justifyContent="center"
         height={20}
         bg={"gray.900"}

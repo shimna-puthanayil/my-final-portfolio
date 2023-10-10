@@ -1,4 +1,5 @@
-import Skill from "../components/UI/skill";
+//importing the component Skill from components folder
+import Skill from "../components/UI/Skill";
 //importing CHAKRA UI components
 import {
   Box,
@@ -9,10 +10,12 @@ import {
   VStack,
   Link,
 } from "@chakra-ui/react";
+
 import resumePath from "./assets/Resume.pdf";
 import skillsInfo from "../utils/skillsInfo";
 import { useState, useEffect } from "react";
 
+// This function renders the section for Resume
 export default function ResumePage() {
   const headingColor = "rgb(217, 185, 121)";
   const fontColor = "#ccd6db";
@@ -29,12 +32,12 @@ export default function ResumePage() {
     setBackEndSkills(backEndskills);
   };
 
-  // Call this function on page load to retrieve  all front end skills
+  // When the component mounts to the VDOM, run this callback to retrieve  all front end skills
   useEffect(() => {
     getFrontEndSkills();
   }, []);
 
-  // Call this function on page load to retrieve  all back end skills
+  // When the component mounts to the VDOM, run this callback to retrieve  all back end skills
   useEffect(() => {
     getBackEndSkills();
   }, []);

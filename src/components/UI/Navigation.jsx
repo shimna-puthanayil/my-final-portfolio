@@ -1,5 +1,6 @@
+//importing CHAKRA UI components
 import { Breadcrumb, BreadcrumbItem } from "@chakra-ui/react";
-
+//renders the navigation links
 export default function Navigation({ links, handlePageChange, currentPage }) {
   return (
     <>

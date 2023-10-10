@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/layout";
+//importing CHAKRA UI components
 import {
   Box,
   Center,
@@ -9,9 +9,13 @@ import {
   Link,
   VStack,
   Divider,
+  Flex,
 } from "@chakra-ui/react";
 
+//import icon
 import { FaGithub } from "react-icons/fa6";
+
+//render details about individual projects
 export default function Project({
   project: { name, url, deploymentLink, description, gitHubLink },
 }) {

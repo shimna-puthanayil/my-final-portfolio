@@ -1,4 +1,5 @@
 import profilePic from "../assets/images/pro-photo.jpg";
+//importing CHAKRA UI components
 import {
   Container,
   Heading,
@@ -7,8 +8,10 @@ import {
   Box,
   Avatar,
 } from "@chakra-ui/react";
+//import component TextAnimation from components folder
 import TextAnimation from "../components/UI/TextAnimation";
 
+//renders the 'About Me ' section
 export default function AboutPage() {
   const fontColor = "rgb(217, 185, 121)";
   const size = "300px";
@@ -77,7 +80,7 @@ export default function AboutPage() {
         about learning new technologies. I am very happy that I am doing a
         course in coding that will empower me to achieve my goals. I love
         photography as a hobby. I believe this can help me to design websites
-        that are more visually asthetic.
+        that are more visually aesthetic.
       </Text>
     </Container>
   );

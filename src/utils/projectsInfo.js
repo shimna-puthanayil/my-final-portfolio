@@ -1,3 +1,4 @@
+//This function returns details(name,description,deployment link, image url and github link) about all projects to display in portfolio
 const getProjects = () => {
   const projects = [
     {

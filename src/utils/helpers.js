@@ -1,4 +1,4 @@
-//function to validate email
+//function to validate email address
 
 export function validateEmail(email) {
   const re =

@@ -61,6 +61,7 @@ export default function ContactPage() {
       return error;
     }
   }
+  //renders the 'Contact Me ' section
   return (
     <Flex align="center" justify="center" id="contact">
       <Box
@@ -100,7 +101,6 @@ export default function ContactPage() {
               p={8}
               color={useColorModeValue("gray.700", "whiteAlpha.900")}
               shadow="base"
-              // w="600px"
               w={{ base: "auto", md: "600px", lg: "600px" }}
               mt={{ base: 5, md: -10 }}
             >

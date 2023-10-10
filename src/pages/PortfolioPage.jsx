@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+//importing CHAKRA UI components
 import {
   SimpleGrid,
   Divider,
@@ -21,7 +22,7 @@ export default function PortfolioPage() {
     const projects = projectsInfo.getProjects();
     setProjects(projects);
   };
-  // Call this function on page load to retrieve the information about all projects
+  // When the component mounts to the VDOM, run this callback to retrieve the information about all projects
   useEffect(() => {
     getProjectInfo();
   }, []);

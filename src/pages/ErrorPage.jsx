@@ -1,9 +1,10 @@
 import { useRouteError } from "react-router-dom";
+//importing CHAKRA UI components
 import { Box, Flex, Heading, VStack, Text } from "@chakra-ui/react";
 const headingColor = "rgb(217, 185, 121)";
 export default function ErrorPage() {
   const error = useRouteError();
-
+  //renders the error page section
   return (
     <Flex justify="center" bg={"black"} minHeight="100vh">
       <Box
@@ -34,9 +35,7 @@ export default function ErrorPage() {
             Oops!
           </Heading>
 
-          <Text  color="#ccd6db">
-            Sorry, an unexpected error has occurred.
-          </Text>
+          <Text color="#ccd6db">Sorry, an unexpected error has occurred.</Text>
 
           <i>{error.statusText || error.message}</i>
         </VStack>
