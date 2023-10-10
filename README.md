@@ -30,23 +30,25 @@ npm start
 
 The following images show the web application's appearance and functionality :
 
+![P 1](./src/assets/images/portfolio.gif)
+
 **About Me**
 
-![LM 1](./src/assets/images/p1.png)
+![P 1](./src/assets/images/p1.png)
 
 **Portfolio**
 
-![LM 2](./src/assets/images/p2.png)
+![P 2](./src/assets/images/p2.png)
 
 **Contact Me**
 
-![LM 3](./src/assets/images/p3.png)
+![P 3](./src/assets/images/p3.png)
 
 **Resume**
 
-![LM 4](./src/assets/images/p4.png)
+![P 4](./src/assets/images/p4.png)
 
-## Technologies Used
+## Technologies And Tools Used
 
 - **React JS**
 
