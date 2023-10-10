@@ -1,5 +1,5 @@
 //importing the component Skill from components folder
-import Skill from "../components/UI/Skill";
+import Skill from "../components/UI/skill";
 //importing CHAKRA UI components
 import {
   Box,
