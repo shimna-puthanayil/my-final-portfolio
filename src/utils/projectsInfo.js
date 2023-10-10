@@ -47,7 +47,8 @@ const getProjects = () => {
       name: "Portfolio",
       url: "images/portfolio.jpeg",
       deploymentLink: "https://dapper-empanada-1db9b0.netlify.app/",
-      description: "This application helps to build a portfolio using React.",
+      description:
+        "This application is a single-page application portfolio built using React for web developers to create a captivating showcase for their work.",
       gitHubLink: "https://github.com/shimna-puthanayil/my-final-portfolio",
     },
   ];

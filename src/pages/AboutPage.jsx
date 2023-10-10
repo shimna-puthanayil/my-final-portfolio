@@ -1,4 +1,4 @@
-import profilePic from "../images/pro-photo.jpg";
+import profilePic from "../assets/images/pro-photo.jpg";
 import {
   Container,
   Heading,

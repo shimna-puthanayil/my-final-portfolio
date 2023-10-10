@@ -1,4 +1,4 @@
-import { Box, Heading, Flex } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 export default function App({ skills, title }) {
   const headingColor = "rgb(217, 185, 121)";
   return (

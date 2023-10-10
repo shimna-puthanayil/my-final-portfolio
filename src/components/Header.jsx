@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Navigation from "./UI/Navigation";
 import { Stack, Heading, Box, Center } from "@chakra-ui/react";
 export default function Header() {
-  const [currentPage, setCurrentPage] = useState("AboutMe");
+  const [currentPage, setCurrentPage] = useState(0);
   const handlePageChange = (page) => setCurrentPage(page);
   // The Navbar UI component will render each of the Link elements in the links prop
   return (
