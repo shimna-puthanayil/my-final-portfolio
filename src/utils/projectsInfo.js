@@ -2,6 +2,14 @@
 const getProjects = () => {
   const projects = [
     {
+      name: "SparkShopper",
+      url: "images/e-com.jpeg",
+      deploymentLink: "https://spark-shopper-c35a92bbd283.herokuapp.com/",
+      description:
+        "The application is a one-stop shop for hassle free online shopping.",
+      gitHubLink: "https://github.com/Tristenh/spark-shopper",
+    },
+    {
       name: "RecipeBox",
       url: "images/rb.jpeg",
       deploymentLink:
@@ -34,14 +42,6 @@ const getProjects = () => {
       description:
         "This single-page application builds a text editor that runs in the browser and meets the PWA criteria ",
       gitHubLink: "https://github.com/shimna-puthanayil/my-text-pad",
-    },
-    {
-      name: "CodeQuiz",
-      url: "images/quiz.jpeg",
-      deploymentLink: "https://shimna-puthanayil.github.io/code-quiz/",
-      description:
-        "The application helps to build a timed coding quiz that stores high scores.",
-      gitHubLink: "https://github.com/shimna-puthanayil/code-quiz",
     },
 
     {
