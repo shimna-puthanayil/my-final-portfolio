@@ -1,5 +1,5 @@
 //importing CHAKRA UI components
-import { Breadcrumb, BreadcrumbItem } from "@chakra-ui/react";
+import { Breadcrumb, BreadcrumbItem, Center } from "@chakra-ui/react";
 //renders the navigation links
 export default function Navigation({ links, handlePageChange, currentPage }) {
   return (
@@ -11,14 +11,25 @@ export default function Navigation({ links, handlePageChange, currentPage }) {
         _visited={{ color: "rgb(217, 185, 121)" }}
       >
         {links.map((link, i) => (
-          <BreadcrumbItem
-            key={i}
-            onClick={() => handlePageChange(i)}
-            color={currentPage === i ? "rgb(217, 185, 121)" : "#ccd6db"}
-            _hover={{ color: "rgb(217, 185, 121)", textDecoration: "none" }}
+          <Center
+            h="20px"
+            borderRadius="full"
+            p={4}
+            w="100px"
+            _hover={{ bg: "gray.900" }}
           >
-            {link}
-          </BreadcrumbItem>
+            <BreadcrumbItem
+              key={i}
+              onClick={() => handlePageChange(i)}
+              color={currentPage === i ? "rgb(217, 185, 121)" : "#ccd6db"}
+              _hover={{
+                color: "rgb(217, 185, 121)",
+                textDecoration: "none",
+              }}
+            >
+              {link}
+            </BreadcrumbItem>
+          </Center>
         ))}
       </Breadcrumb>
     </>

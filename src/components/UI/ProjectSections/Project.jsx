@@ -63,7 +63,7 @@ export default function Project({
               h: "full",
 
               pos: "absolute",
-              top: 70,
+              top: 71,
               left: 0,
               background: `url("images/wb.png") center/contain`,
               backgroundSize: "auto",
@@ -81,7 +81,7 @@ export default function Project({
               <Image
                 mt={73}
                 rounded={"lg"}
-                height={252}
+                height={257}
                 width={500}
                 objectFit={"cover"}
                 src={url}
