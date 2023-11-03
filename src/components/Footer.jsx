@@ -1,5 +1,5 @@
 //importing CHAKRA UI components
-import { HStack, Link } from "@chakra-ui/react";
+import { HStack, Link, IconButton, Box } from "@chakra-ui/react";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa6";
 
 const gitHubLink = "https://github.com/shimna-puthanayil";
@@ -16,13 +16,54 @@ export default function Footer() {
         bg={"gray.900"}
       >
         <Link href={gitHubLink} ml={2} isExternal>
-          <FaGithub size={"22px"} color={"rgb(217, 185, 121)"} />
+          <IconButton
+            bgColor={"gray.900"}
+            size={"22px"}
+            color={"rgb(217, 185, 121)"}
+            isRound={true}
+            variant="solid"
+            aria-label="Done"
+            fontSize="22px"
+            icon={<FaGithub />}
+            _hover={{
+              color: "#a5b5bc",
+              fontSize: { base: "20px", md: "24px" },
+            }}
+          ></IconButton>
         </Link>
-        <Link href={linkedInLink} ml={2} isExternal>
-          <FaLinkedin size={"22px"} color={"rgb(217, 185, 121)"} />
+
+        <Link href={linkedInLink} ml={2} isExternal mx={10}>
+          <IconButton
+            bgColor={"gray.900"}
+            size={"22px"}
+            color={"rgb(217, 185, 121)"}
+            isRound={true}
+            variant="solid"
+            aria-label="Done"
+            fontSize="22px"
+            icon={<FaLinkedin />}
+            _hover={{
+              color: "#a5b5bc",
+              fontSize: { base: "20px", md: "24px" },
+            }}
+          ></IconButton>
         </Link>
+
         <Link href={twitterLink} ml={2} isExternal>
-          <FaTwitter size={"22px"} color={"rgb(217, 185, 121)"} />
+          <IconButton
+            bgColor={"gray.900"}
+            size={"22px"}
+            color={"rgb(217, 185, 121)"}
+            isRound={true}
+            variant="solid"
+            aria-label="Done"
+            fontSize="22px"
+            icon={<FaTwitter />}
+            _hover={{
+              color: "#a5b5bc",
+              fontSize: { base: "20px", md: "24px" },
+            }}
+          ></IconButton>
         </Link>
       </HStack>
     </>

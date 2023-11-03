@@ -10,6 +10,7 @@ import {
   VStack,
   Divider,
   Flex,
+  IconButton,
 } from "@chakra-ui/react";
 
 //import icon
@@ -61,12 +62,11 @@ export default function Project({
               content: '""',
               w: "full",
               h: "full",
-
               pos: "absolute",
               top: 71,
               left: 0,
               background: `url("images/wb.png") center/contain`,
-              backgroundSize: "auto",
+
               filter: "blur(5px)",
               zIndex: -1,
             }}
@@ -84,6 +84,7 @@ export default function Project({
                 height={257}
                 width={500}
                 objectFit={"cover"}
+                objectPosition={"left bottom"}
                 src={url}
                 alt="Project Photos"
               />
@@ -113,7 +114,20 @@ export default function Project({
             />
             <Box h="30px" align={"center"} pt={1}>
               <Link href={gitHubLink} isExternal>
-                <FaGithub size={"20px"} color={"#a5b5bc"} />
+                <IconButton
+                  bgColor={"gray.900"}
+                  size={"20px"}
+                  color={"#a5b5bc"}
+                  isRound={true}
+                  variant="solid"
+                  aria-label="Done"
+                  fontSize="20px"
+                  icon={<FaGithub />}
+                  _hover={{
+                    color: "rgb(217, 185, 121)",
+                    fontSize: { base: "20px", md: "24px" },
+                  }}
+                ></IconButton>
               </Link>
             </Box>
           </VStack>

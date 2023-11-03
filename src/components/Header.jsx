@@ -15,11 +15,16 @@ export default function Header() {
       <Stack
         as="header"
         position="fixed"
-        direction={["column", "row"]}
+        direction={["column", "column", "column", "row"]}
         spacing="24px"
         align="center"
-        justify={{ base: "center", md: "space-between" }}
-        height={{ base: 200, md: 100 }}
+        justify={{
+          base: "center",
+          sm: "center",
+          md: "center",
+          lg: "space-between",
+        }}
+        height={{ base: 200, sm: 200, md: 200, lg: 100 }}
         bg={"gray.700"}
         width="100%"
         zIndex={2}
@@ -52,7 +57,7 @@ export default function Header() {
               left: 4,
 
               backgroundImage: `url("images/wb.png")`,
-              ml: { base: "-115px", md: "15px" },
+              ml: { base: "-115px", md: "-115px", lg: "15px" },
               mt: { base: -7, md: -7 },
               borderRadius: "full",
               filter: "blur(10px)",
@@ -70,7 +75,7 @@ export default function Header() {
               h="50px"
               borderRadius="full"
               p={5}
-              ml={{ base: "-200px", md: "30px" }}
+              ml={{ base: "-200px", md: "-200px", lg: "30px" }}
               mt={{ base: 10, sm: 10, md: 7 }}
               w="300px"
             >
@@ -90,18 +95,10 @@ export default function Header() {
             currentPage={currentPage}
             handlePageChange={handlePageChange}
             links={[
-              <Link key={1} to="/">
-                About
-              </Link>,
-              <Link key={2} to="/Portfolio">
-                Portfolio
-              </Link>,
-              <Link key={3} to="/Contact">
-                Contact
-              </Link>,
-              <Link key={4} to="/Resume">
-                Resume
-              </Link>,
+              <Link to="/">About</Link>,
+              <Link to="/Portfolio">Portfolio</Link>,
+              <Link to="/Contact">Contact</Link>,
+              <Link to="/Resume">Resume</Link>,
             ]}
           />
         </Box>
