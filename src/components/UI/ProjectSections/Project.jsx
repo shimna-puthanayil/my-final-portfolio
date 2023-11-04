@@ -11,14 +11,16 @@ import {
   Divider,
   Flex,
   IconButton,
+  HStack,
 } from "@chakra-ui/react";
+import { wrap } from "framer-motion";
 
 //import icon
 import { FaGithub } from "react-icons/fa6";
 
 //render details about individual projects
 export default function Project({
-  project: { name, url, deploymentLink, description, gitHubLink },
+  project: { name, url, deploymentLink, description, gitHubLink, technologies },
 }) {
   const fontColor = "rgb(217, 185, 121)";
   return (
@@ -28,7 +30,7 @@ export default function Project({
           role={"group"}
           p={6}
           maxW={"500px"}
-          height={{ base: "533", md: "485px" }}
+          height={{ base: "740", md: "585px" }}
           w={"full"}
           bgGradient={["linear(to-b, gray.900, gray.700)"]}
           _groupHover={{
@@ -109,14 +111,44 @@ export default function Project({
             </Box>
             <Divider
               borderColor="gray.600"
-              mt={{ base: 12, md: 1 }}
+              mt={{ base: 12, md: 2 }}
               mb={{ base: 1, md: 1 }}
             />
-            <Box h="30px" align={"center"} pt={1}>
+            <Flex
+              h="30px"
+              align={"center"}
+              mt={3}
+              wrap={{ base: "wrap", md: "nowrap" }}
+              justify={{ base: "space-around", md: "center" }}
+            >
+              {technologies.map((technology, i) => (
+                <Image
+                  mt={{ base: 3, md: 0 }}
+                  key={i}
+                  rounded={"lg"}
+                  height={6}
+                  width={"100px"}
+                  objectFit={"contain"}
+                  src={technology}
+                ></Image>
+              ))}
+            </Flex>
+            <Divider
+              borderColor="gray.600"
+              mt={{ base: 42, md: 4 }}
+              mb={{ base: 1, md: 1 }}
+            />
+            <Box
+              h="40px"
+              align={"center"}
+              mt={{ base: 20, md: 2 }}
+              borderRadius="full"
+              bgGradient={["linear(to-b, gray.600, gray.800)"]}
+            >
               <Link href={gitHubLink} isExternal>
                 <IconButton
-                  bgColor={"gray.900"}
-                  size={"20px"}
+                  bgGradient={["linear(to-b, gray.600, gray.800)"]}
+                  boxSize={10}
                   color={"#a5b5bc"}
                   isRound={true}
                   variant="solid"
@@ -127,7 +159,7 @@ export default function Project({
                     color: "rgb(217, 185, 121)",
                     fontSize: { base: "20px", md: "24px" },
                   }}
-                ></IconButton>
+                />
               </Link>
             </Box>
           </VStack>

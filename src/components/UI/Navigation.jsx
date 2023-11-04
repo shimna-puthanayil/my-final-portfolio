@@ -12,6 +12,7 @@ export default function Navigation({ links, handlePageChange, currentPage }) {
       >
         {links.map((link, i) => (
           <BreadcrumbItem
+            align={"center"}
             p={4}
             h="20px"
             w="90px"
@@ -21,7 +22,7 @@ export default function Navigation({ links, handlePageChange, currentPage }) {
             _hover={{
               color: "rgb(217, 185, 121)",
               textDecoration: "none",
-              bgColor: "gray.900",
+              bgGradient: ["linear(to-b, gray.700, gray.900)"],
               borderRadius: "full",
             }}
           >
