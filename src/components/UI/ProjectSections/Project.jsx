@@ -30,7 +30,7 @@ export default function Project({
           role={"group"}
           p={6}
           maxW={"500px"}
-          height={{ base: "740", md: "585px" }}
+          height={{ base: "743", md: "585px" }}
           w={"full"}
           bgGradient={["linear(to-b, gray.900, gray.700)"]}
           _groupHover={{
@@ -111,7 +111,7 @@ export default function Project({
             </Box>
             <Divider
               borderColor="gray.600"
-              mt={{ base: 12, md: 2 }}
+              mt={{ base: "60px", md: 2 }}
               mb={{ base: 1, md: 1 }}
             />
             <Flex
@@ -119,7 +119,7 @@ export default function Project({
               align={"center"}
               mt={3}
               wrap={{ base: "wrap", md: "nowrap" }}
-              justify={{ base: "space-around", md: "center" }}
+              justify={{ base: "center", md: "center" }}
             >
               {technologies.map((technology, i) => (
                 <Image
@@ -135,13 +135,13 @@ export default function Project({
             </Flex>
             <Divider
               borderColor="gray.600"
-              mt={{ base: 42, md: 4 }}
+              mt={{ base: "120px", md: 4 }}
               mb={{ base: 1, md: 1 }}
             />
             <Box
               h="40px"
               align={"center"}
-              mt={{ base: 20, md: 2 }}
+              mt={{ base: 2, md: 2 }}
               borderRadius="full"
               bgGradient={["linear(to-b, gray.600, gray.800)"]}
             >
