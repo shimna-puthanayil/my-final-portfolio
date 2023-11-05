@@ -1,5 +1,5 @@
 //importing CHAKRA UI components
-import { Box, Breadcrumb, BreadcrumbItem } from "@chakra-ui/react";
+import { Box, Breadcrumb, BreadcrumbItem, Text } from "@chakra-ui/react";
 //renders the navigation links
 export default function Navigation({ links, handlePageChange, currentPage }) {
   return (
@@ -8,14 +8,14 @@ export default function Navigation({ links, handlePageChange, currentPage }) {
         separator=" "
         display="flex"
         px={50}
-        _visited={{ color: "rgb(217, 185, 121)" }}
+        // _visited={{ color: "rgb(217, 185, 121)" }}
       >
         {links.map((link, i) => (
           <BreadcrumbItem
             key={i}
             alignSelf={"center"}
             h="20px"
-            color={currentPage === i ? "rgb(217, 185, 121)" : "#ccd6db"}
+
             // _hover={{
             //   color: "rgb(217, 185, 121)",
             //   textDecoration: "none",
@@ -29,11 +29,10 @@ export default function Navigation({ links, handlePageChange, currentPage }) {
           >
             <Box
               textAlign={"center"}
-              onClick={() => handlePageChange(i)}
               w={{ md: "100px" }}
               p={{ base: 1, md: 1 }}
               _hover={{
-                color: "rgb(217, 185, 121)",
+                // color: "rgb(217, 185, 121)",
                 textDecoration: "none",
                 bgGradient: {
                   md: [
@@ -43,7 +42,16 @@ export default function Navigation({ links, handlePageChange, currentPage }) {
                 borderRadius: "full",
               }}
             >
-              {link}
+              <Text
+                color={currentPage === i ? "rgb(217, 185, 121)" : "#ccd6db"}
+                onClickCapture={() => handlePageChange(i)}
+                // onClick={() => handlePageChange(i)}
+                _hover={{
+                  color: "rgb(217, 185, 121)",
+                }}
+              >
+                {link}
+              </Text>
             </Box>
           </BreadcrumbItem>
         ))}

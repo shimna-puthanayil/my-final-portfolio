@@ -15,7 +15,6 @@ import {
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
-import { wrap } from "framer-motion";
 
 //import icon
 import { FaGithub } from "react-icons/fa6";
@@ -33,7 +32,6 @@ export default function Project({
           p={6}
           maxW={"500px"}
           height="auto"
-          // height={{ base: "auto", sm: "665px", md: "665px", lg: "615px" }}
           w={"full"}
           bgGradient={["linear(to-b, gray.900, gray.700)"]}
           _groupHover={{
@@ -115,12 +113,10 @@ export default function Project({
             <Divider
               borderColor="gray.600"
               mt={{ base: "60px", sm: "60px", md: "50px", lg: "20px" }}
-              // mb={3}
             />
             <Wrap
               spacing="10px"
               justify="center"
-              // bgColor={"blackAlpha.500"}
               bgGradient={["linear(to-b, gray.900, gray.700)"]}
               p={2}
               pt={{ base: 6, md: 3 }}
