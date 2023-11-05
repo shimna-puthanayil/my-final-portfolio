@@ -124,7 +124,12 @@ export default function Project({
               wrap={{ base: "wrap", sm: "wrap", md: "wrap", lg: "nowrap" }}
               justify={{ base: "center", md: "center" }}
           >*/}
-            <Wrap spacing="10px" justify="center">
+            <Wrap
+              spacing="10px"
+              justify="center"
+              bgColor={"blackAlpha.300"}
+              p={2}
+            >
               {technologies.map((technology, i) => (
                 <WrapItem key={i}>
                   <Center>

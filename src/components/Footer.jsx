@@ -22,7 +22,7 @@ export default function Footer() {
         bg={"gray.900"}
       >
         {/*GitHub link */}
-        <Link href={gitHubLink} ml={2} isExternal>
+        <Link href={gitHubLink} ml={2} mx={5} isExternal>
           <IconButton
             bgColor={"gray.900"}
             size={"22px"}
@@ -39,7 +39,7 @@ export default function Footer() {
           ></IconButton>
         </Link>
         {/*Linkedin link */}
-        <Link href={linkedInLink} ml={2} isExternal mx={10}>
+        <Link href={linkedInLink} ml={2} isExternal mx={5}>
           <IconButton
             bgColor={"gray.900"}
             size={"22px"}
@@ -56,7 +56,7 @@ export default function Footer() {
           ></IconButton>
         </Link>
         {/*twitter link */}
-        <Link href={twitterLink} ml={2} isExternal>
+        <Link href={twitterLink} ml={2} mx={5} isExternal>
           <IconButton
             bgColor={"gray.900"}
             size={"22px"}
@@ -73,7 +73,7 @@ export default function Footer() {
           ></IconButton>
         </Link>
         {/*instagram link */}
-        <Link href={instagramLink} ml={2} mx={10} isExternal>
+        <Link href={instagramLink} ml={2} mx={5} isExternal>
           <IconButton
             bgColor={"gray.900"}
             size={"22px"}

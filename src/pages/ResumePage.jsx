@@ -42,11 +42,11 @@ export default function ResumePage() {
     getBackEndSkills();
   }, []);
   return (
-    <Flex align="center" justify="center" id="contact">
+    <Flex align="center" justify="center">
       <Box
         borderRadius="lg"
-        m={{ base: 5, md: 16, lg: 10 }}
-        p={{ base: 5, lg: 16 }}
+        m={{ base: "auto", md: 16, lg: 10 }}
+        p={{ base: "auto", lg: 16 }}
       >
         <VStack
           spacing={{ base: 4, md: 20, lg: 20 }}
@@ -65,7 +65,7 @@ export default function ResumePage() {
             fontFamily={"body"}
             fontWeight={500}
             color={fontColor}
-            mt={{ base: "70px", md: "0px" }}
+            mt={{ base: "100px", md: "0px" }}
           >
             Download My
             <Link
@@ -91,9 +91,11 @@ export default function ResumePage() {
               spacing={{ base: 4, md: 8, lg: 20 }}
               direction={{ base: "column", md: "row" }}
             >
+              {/*front end skills */}
               <VStack spacing={3} align="center" w={300}>
                 <Skill skills={frontEndskills} title=" Frontend Skills" />
               </VStack>
+              {/*back end skills */}
               <VStack spacing={3} align="center" w={300}>
                 <Skill skills={backEndskills} title=" Backend Skills" />
               </VStack>

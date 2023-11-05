@@ -7,6 +7,7 @@ import {
   keyframes,
   Box,
   Avatar,
+  Center,
 } from "@chakra-ui/react";
 //import component TextAnimation from components folder
 import TextAnimation from "../components/UI/TextAnimation";
@@ -75,7 +76,7 @@ export default function AboutPage() {
         />
       </Box>
       <TextAnimation />
-      <Text fontSize={"lg"} mt={22} color="#ccd6db">
+      <Text fontSize={"lg"} mt={22} color="#ccd6db" textAlign={"justify"}>
         I love coding and I aspire to become a web developer. I am passionate
         about learning new technologies. I appreciate well designed websites
         which makes me spend more time on them. My obsession with design details
@@ -85,13 +86,13 @@ export default function AboutPage() {
         interested in backend technologies and databases which are the backbone
         of every web application.
       </Text>
-      <Text fontSize={"lg"} mt={22} color="#ccd6db">
+      <Text fontSize={"lg"} mt={22} color="#ccd6db" textAlign={"justify"}>
         I am confident of attempting development challenges using Node.js,
-        Express.js, React.js ,MongoDB and Mongoose ODM ,Apollo GraphQL, MySQL
-        and Sequelize ORM, Javascript, jQuery, CSS, HTML, Bootstrap ,Chakra UI
+        Express.js, React.js, MongoDB and Mongoose ODM, Apollo GraphQL, MySQL
+        and Sequelize ORM, Javascript, jQuery, CSS, HTML, Bootstrap, Chakra UI
         and git.
       </Text>
-      <Text fontSize={"lg"} mt={22} color="#ccd6db">
+      <Text fontSize={"lg"} mt={22} color="#ccd6db" textAlign={"justify"}>
         When I am not working you can see me with my camera. I am a passionate
         photographer and very keen in portrait photography.
       </Text>
