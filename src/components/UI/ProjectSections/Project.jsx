@@ -115,20 +115,17 @@ export default function Project({
             <Divider
               borderColor="gray.600"
               mt={{ base: "60px", sm: "60px", md: "50px", lg: "20px" }}
-              mb={3}
+              // mb={3}
             />
-            {/* <Flex
-              h="30px"
-              align={"center"}
-              mt={3}
-              wrap={{ base: "wrap", sm: "wrap", md: "wrap", lg: "nowrap" }}
-              justify={{ base: "center", md: "center" }}
-          >*/}
             <Wrap
               spacing="10px"
               justify="center"
-              bgColor={"blackAlpha.300"}
+              // bgColor={"blackAlpha.500"}
+              bgGradient={["linear(to-b, gray.900, gray.700)"]}
               p={2}
+              pt={{ base: 6, md: 3 }}
+              pb={{ md: 2 }}
+              rounded={"lg"}
             >
               {technologies.map((technology, i) => (
                 <WrapItem key={i}>
@@ -150,7 +147,7 @@ export default function Project({
 
             <Divider
               borderColor="gray.600"
-              mt={{ base: 0, sm: 4, md: 4, lg: 4 }}
+              // mt={{ base: 0, sm: 4, md: 4, lg: 4 }}
               mb={{ base: 1, md: 1 }}
             />
 
