@@ -9,13 +9,12 @@ const getProjects = () => {
         "Spark Shopper is an e-commerce application feature-packed with efficient search, easy registration, quick cart additions, share your thoughts, manage your wish list, order history and swift check out. ",
       gitHubLink: "https://github.com/Tristenh/spark-shopper",
       technologies: [
-        "images/chakra-ui.png",
-        "images/graph.png",
         "images/mon.png",
         "images/exp.png",
         "images/rr1.png",
         "images/no.png",
-
+        "images/chakra-ui.png",
+        "images/graph.png",
         "images/stripe.png",
       ],
     },

@@ -90,7 +90,6 @@ export default function AboutPage() {
         fontSize={"lg"}
         mt={22}
         color="#ccd6db"
-       
         textAlign={{ base: "justify", md: "justify" }}
       >
         I am confident of attempting development challenges using Node.js,
@@ -99,7 +98,7 @@ export default function AboutPage() {
         Bootstrap, Chakra UI and git.
       </Text>
       <Text fontSize={"lg"} mt={22} color="#ccd6db" textAlign={"justify"}>
-        If I'm not working you can see me with my camera. I am a passionate
+        In my free time you can see me with my camera. I am a passionate
         photographer and very keen in portrait photography.
       </Text>
     </Container>

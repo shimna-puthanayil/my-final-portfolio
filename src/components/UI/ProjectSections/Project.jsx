@@ -115,7 +115,7 @@ export default function Project({
               mt={{ base: "60px", sm: "60px", md: "50px", lg: "20px" }}
             />
             <Wrap
-              spacing="10px"
+              spacing={{ base: "5px", md: "10px" }}
               justify="center"
               bgGradient={["linear(to-b, gray.900, gray.700)"]}
               p={2}
@@ -131,8 +131,8 @@ export default function Project({
                       mb={{ base: 5, md: 0 }}
                       key={i}
                       rounded={"lg"}
-                      height={6}
-                      width={"100px"}
+                      height={{ base: 6, md: 6 }}
+                      width={{ base: "80px", md: "100px" }}
                       objectFit={"contain"}
                       src={technology}
                     ></Image>
