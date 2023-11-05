@@ -95,7 +95,9 @@ export default function Header() {
             currentPage={currentPage}
             handlePageChange={handlePageChange}
             links={[
-              <Link to="/">About</Link>,
+              <Link align={"center"} to="/">
+                About
+              </Link>,
               <Link to="/Portfolio">Portfolio</Link>,
               <Link to="/Contact">Contact</Link>,
               <Link to="/Resume">Resume</Link>,

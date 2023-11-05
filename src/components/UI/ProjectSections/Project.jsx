@@ -12,6 +12,8 @@ import {
   Flex,
   IconButton,
   HStack,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import { wrap } from "framer-motion";
 
@@ -30,7 +32,8 @@ export default function Project({
           role={"group"}
           p={6}
           maxW={"500px"}
-          height={{ base: "743", md: "585px" }}
+          height="auto"
+          // height={{ base: "auto", sm: "665px", md: "665px", lg: "615px" }}
           w={"full"}
           bgGradient={["linear(to-b, gray.900, gray.700)"]}
           _groupHover={{
@@ -111,37 +114,45 @@ export default function Project({
             </Box>
             <Divider
               borderColor="gray.600"
-              mt={{ base: "60px", md: 2 }}
-              mb={{ base: 1, md: 1 }}
+              mt={{ base: "60px", sm: "60px", md: "50px", lg: "20px" }}
+              mb={3}
             />
-            <Flex
+            {/* <Flex
               h="30px"
               align={"center"}
               mt={3}
-              wrap={{ base: "wrap", md: "nowrap" }}
+              wrap={{ base: "wrap", sm: "wrap", md: "wrap", lg: "nowrap" }}
               justify={{ base: "center", md: "center" }}
-            >
+          >*/}
+            <Wrap spacing="10px" justify="center">
               {technologies.map((technology, i) => (
-                <Image
-                  mt={{ base: 3, md: 0 }}
-                  key={i}
-                  rounded={"lg"}
-                  height={6}
-                  width={"100px"}
-                  objectFit={"contain"}
-                  src={technology}
-                ></Image>
+                <WrapItem key={i}>
+                  <Center>
+                    <Image
+                      mt={{ base: 0, md: 0 }}
+                      mb={{ base: 5, md: 0 }}
+                      key={i}
+                      rounded={"lg"}
+                      height={6}
+                      width={"100px"}
+                      objectFit={"contain"}
+                      src={technology}
+                    ></Image>
+                  </Center>
+                </WrapItem>
               ))}
-            </Flex>
+            </Wrap>
+
             <Divider
               borderColor="gray.600"
-              mt={{ base: "120px", md: 4 }}
+              mt={{ base: 0, sm: 4, md: 4, lg: 4 }}
               mb={{ base: 1, md: 1 }}
             />
+
             <Box
               h="40px"
               align={"center"}
-              mt={{ base: 2, md: 2 }}
+              mt={4}
               borderRadius="full"
               bgGradient={["linear(to-b, gray.600, gray.800)"]}
             >
