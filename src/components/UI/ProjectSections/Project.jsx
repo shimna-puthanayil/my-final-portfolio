@@ -120,7 +120,7 @@ export default function Project({
               bgGradient={["linear(to-b, gray.900, gray.700)"]}
               p={2}
               pt={{ base: 6, md: 3 }}
-              pb={{ md: 2 }}
+              pb={{ base: 1, md: 3 }}
               rounded={"lg"}
             >
               {technologies.map((technology, i) => (
@@ -128,7 +128,7 @@ export default function Project({
                   <Center>
                     <Image
                       mt={{ base: 0, md: 0 }}
-                      mb={{ base: 5, md: 0 }}
+                      mb={{ base: 3, md: 0 }}
                       key={i}
                       rounded={"lg"}
                       height={{ base: 6, md: 6 }}
