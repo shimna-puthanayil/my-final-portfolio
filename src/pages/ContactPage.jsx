@@ -21,6 +21,7 @@ import {
 
 // Importing  icons
 import { BsPerson } from "react-icons/bs";
+import { BiMessageRoundedDetail } from "react-icons/bi";
 import { MdOutlineEmail } from "react-icons/md";
 
 // Importing a helper function that will check if the email is valid
@@ -63,7 +64,27 @@ export default function ContactPage() {
   }
   //renders the 'Contact Me ' section
   return (
-    <Flex align="center" justify="center" id="contact">
+    <Flex
+      align="center"
+      justify="center"
+      id="contact"
+      pos="relative"
+      bg="black"
+      _before={{
+        w: "full",
+        content: '""',
+        bgImage: "url(images/contact-bg.png)",
+        bgSize: "cover",
+        pos: "absolute",
+        top: 10,
+        right: 0,
+        left: 0,
+        bottom: 0,
+        borderBottomLeftRadius: 80,
+        borderTopRightRadius: 80,
+        opacity: 0.2,
+      }}
+    >
       <Box
         borderRadius="lg"
         m={{ base: 5, md: 16, lg: 10 }}
@@ -87,6 +108,7 @@ export default function ContactPage() {
             fontWeight={500}
             color={headingColor}
             mt={{ base: "70px", md: "0px" }}
+            zIndex={1}
           >
             Contact Me
           </Heading>
@@ -107,17 +129,35 @@ export default function ContactPage() {
               <VStack spacing={5}>
                 <Formik
                   initialValues={{}}
-                  onSubmit={(values, actions) => {
+                  onSubmit={(values, actions, { resetForm }) => {
                     setTimeout(() => {
                       // alert(JSON.stringify(values, null, 2));
                       actions.setSubmitting(false);
                     }, 1000);
-                    console.log(values.email);
-                    console.log(values.name);
+                    const serviceId = "service_tl4o2cr";
+                    const templateId = "template_in6xf2c";
+                    emailjs
+                      .send(serviceId, templateId, {
+                        message: values.message,
+                        name: values.name,
+                        email: values.email,
+                      })
+                      .then((res) => {
+                        console.log("Email successfully sent!");
+                        formik.resetForm();
+                      })
+                      // Handle errors
+                      .catch((err) =>
+                        console.error(
+                          "Oh well, you failed. Here some thoughts on the error that occured:",
+                          err
+                        )
+                      );
                   }}
                 >
                   {(props) => (
                     <Form>
+                      {/* name */}
                       <Field name="name" validate={validateName}>
                         {({ field, form }) => (
                           <FormControl
@@ -125,13 +165,13 @@ export default function ContactPage() {
                             isRequired
                           >
                             <FormLabel color={fontColor}>Name</FormLabel>
-
                             <InputGroup>
                               <InputLeftElement>
                                 <BsPerson color="#ccd6db" />
                               </InputLeftElement>
                               <Input
                                 {...field}
+                                value={form.name}
                                 placeholder="name"
                                 w={{ base: "auto", md: "500px", lg: "500px" }}
                                 color={fontColor}
@@ -147,13 +187,16 @@ export default function ContactPage() {
                           </FormControl>
                         )}
                       </Field>
+                      {/* email */}
                       <Field name="email" validate={validateEmailId}>
                         {({ field, form }) => (
                           <FormControl
                             isInvalid={form.errors.email && form.touched.email}
                             isRequired
                           >
-                            <FormLabel color={fontColor}>Email</FormLabel>
+                            <FormLabel mt={2} color={fontColor}>
+                              Email
+                            </FormLabel>
 
                             <InputGroup>
                               <InputLeftElement>
@@ -161,6 +204,7 @@ export default function ContactPage() {
                               </InputLeftElement>
                               <Input
                                 {...field}
+                                value={form.email}
                                 placeholder="email"
                                 color={fontColor}
                                 borderColor={borderColor}
@@ -175,7 +219,7 @@ export default function ContactPage() {
                           </FormControl>
                         )}
                       </Field>
-
+                      {/* message */}
                       <Field name="message" validate={validateMessage}>
                         {({ field, form }) => (
                           <FormControl
@@ -184,9 +228,12 @@ export default function ContactPage() {
                             }
                             isRequired
                           >
-                            <FormLabel color={fontColor}>Message</FormLabel>
+                            <FormLabel mt={2} color={fontColor}>
+                              Message
+                            </FormLabel>
 
                             <Textarea
+                              p={2}
                               {...field}
                               name="message"
                               placeholder="Your Message"
@@ -199,6 +246,7 @@ export default function ContactPage() {
                                 borderColor: { borderColorOnFocus },
                               }}
                             />
+
                             <FormErrorMessage>
                               {form.errors.message}
                             </FormErrorMessage>
