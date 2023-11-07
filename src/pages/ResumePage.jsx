@@ -11,7 +11,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 
-import resumePath from "./assets/Resume.pdf";
+import resumePath from "./assets/Shimna-Resume.pdf";
 import skillsInfo from "../utils/skillsInfo";
 import { useState, useEffect } from "react";
 
@@ -52,7 +52,7 @@ export default function ResumePage() {
           spacing={{ base: 4, md: 20, lg: 20 }}
           borderRadius="lg"
           bgGradient={{
-            md: "linear(to-b, gray.900, gray.700)",
+            md: "linear(to-b, gray.900, gray.800,gray.700)",
             base: "black",
           }}
           mt={90}

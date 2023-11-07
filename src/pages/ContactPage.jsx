@@ -1,6 +1,6 @@
 //importing  formik to build forms by integrating Chakra UI with Formik
 import { Field, Form, Formik } from "formik";
-
+import { useFormik } from "formik";
 //importing CHAKRA UI components
 import {
   Box,
@@ -21,7 +21,7 @@ import {
 
 // Importing  icons
 import { BsPerson } from "react-icons/bs";
-import { BiMessageRoundedDetail } from "react-icons/bi";
+
 import { MdOutlineEmail } from "react-icons/md";
 
 // Importing a helper function that will check if the email is valid
@@ -62,6 +62,11 @@ export default function ContactPage() {
       return error;
     }
   }
+  const handleFormReset = (values) => {
+    if (window.confirm("Do You Want To Reset?")) {
+      values = {};
+    }
+  };
   //renders the 'Contact Me ' section
   return (
     <Flex
@@ -71,18 +76,20 @@ export default function ContactPage() {
       pos="relative"
       bg="black"
       _before={{
-        w: "full",
-        content: '""',
-        bgImage: "url(images/contact-bg.png)",
-        bgSize: "cover",
-        pos: "absolute",
-        top: 10,
-        right: 0,
-        left: 0,
-        bottom: 0,
-        borderBottomLeftRadius: 80,
-        borderTopRightRadius: 80,
-        opacity: 0.2,
+        md: {
+          w: "full",
+          content: '""',
+          bgImage: "url(images/contact-bg.png)",
+          bgSize: "cover",
+          pos: "absolute",
+          top: 10,
+          right: 0,
+          left: 0,
+          bottom: 0,
+          borderBottomLeftRadius: 80,
+          borderTopRightRadius: 80,
+          opacity: 0.2,
+        },
       }}
     >
       <Box
@@ -144,7 +151,7 @@ export default function ContactPage() {
                       })
                       .then((res) => {
                         console.log("Email successfully sent!");
-                        formik.resetForm();
+                        resetForm({});
                       })
                       // Handle errors
                       .catch((err) =>
@@ -154,9 +161,10 @@ export default function ContactPage() {
                         )
                       );
                   }}
+                  onReset={handleFormReset}
                 >
                   {(props) => (
-                    <Form>
+                    <Form onSubmit={props.handleSubmit}>
                       {/* name */}
                       <Field name="name" validate={validateName}>
                         {({ field, form }) => (
@@ -171,6 +179,8 @@ export default function ContactPage() {
                               </InputLeftElement>
                               <Input
                                 {...field}
+                                onChange={props.handleChange}
+                                onBlur={props.handleBlur}
                                 value={form.name}
                                 placeholder="name"
                                 w={{ base: "auto", md: "500px", lg: "500px" }}
@@ -204,6 +214,8 @@ export default function ContactPage() {
                               </InputLeftElement>
                               <Input
                                 {...field}
+                                onChange={props.handleChange}
+                                onBlur={props.handleBlur}
                                 value={form.email}
                                 placeholder="email"
                                 color={fontColor}
@@ -258,7 +270,10 @@ export default function ContactPage() {
                         colorScheme="black"
                         isLoading={props.isSubmitting}
                         type="submit"
-                        bgGradient={["linear(to-b, gray.600, gray.800)"]}
+                        // bgGradient={["linear(to-b, gray.600, gray.800)"]}
+                        bgGradient={[
+                          "linear(to-b, gray.700,gray.800,  gray.800,gray.700)",
+                        ]}
                         color={fontColor}
                         borderRadius="full"
                         _hover={{

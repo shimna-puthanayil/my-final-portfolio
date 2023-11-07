@@ -1,5 +1,5 @@
 //importing CHAKRA UI components
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 //this component will be used to render the skill section inside 'Resume ' section
 export default function Skill({ skills, title }) {
   const headingColor = "rgb(217, 185, 121)";
@@ -22,13 +22,15 @@ export default function Skill({ skills, title }) {
           w={300}
           borderTopLeftRadius={40}
           borderBottomRightRadius={40}
-          bgGradient={["linear(to-b, gray.600, gray.800)"]}
+          bgGradient={[
+            "linear(to-b, gray.900, gray.800,gray.700, gray.800, gray.900)",
+          ]}
           color={"#ccd6db"}
           p={2}
           key={i}
           align="center"
         >
-          {skill}
+          <Text fontSize={15}>{skill}</Text>
         </Box>
       ))}
     </>

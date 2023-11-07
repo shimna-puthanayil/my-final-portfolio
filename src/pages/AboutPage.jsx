@@ -34,7 +34,7 @@ export default function AboutPage() {
       centerContent
       borderBottomLeftRadius={80}
       borderBottomRightRadius={80}
-      bgGradient={["linear(to-b, gray.900, gray.700)"]}
+      bgGradient={["linear(to-b, gray.900, gray.800,gray.900)"]}
       p={{ base: 30, md: 50 }}
       h="container.2xl"
     >

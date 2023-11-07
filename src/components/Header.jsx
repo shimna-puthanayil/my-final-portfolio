@@ -25,7 +25,7 @@ export default function Header() {
           lg: "space-between",
         }}
         height={{ base: 200, sm: 200, md: 200, lg: 100 }}
-        bg={"gray.700"}
+        bg={"gray.800"}
         width="100%"
         zIndex={2}
       >
@@ -33,7 +33,7 @@ export default function Header() {
           role={"group"}
           spacing="24px"
           align="center"
-          bg={"gray.700"}
+          bg={"gray.800"}
           boxSize={100}
           _groupHover={{
             before: {

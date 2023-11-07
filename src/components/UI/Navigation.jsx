@@ -35,9 +35,7 @@ export default function Navigation({ links, handlePageChange, currentPage }) {
                 // color: "rgb(217, 185, 121)",
                 textDecoration: "none",
                 bgGradient: {
-                  md: [
-                    "linear(to-b, gray.900,gray.800, gray.700, gray.800,gray.900)",
-                  ],
+                  md: ["linear(to-b, gray.700,gray.800,  gray.800,gray.700)"],
                 },
                 borderRadius: "full",
               }}
