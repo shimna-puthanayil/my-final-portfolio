@@ -2,7 +2,7 @@
 
 ## Description
 
-This application is a single-page application portfolio for web developers built using React. The project helps developers to create a captivating showcase for their work. The application comprises of 4 sections About Me, Portfolio, Contact and Resume. The About Me section contains a photo and a short bio about the developer. The Portfolio section showcases titled images of six of the developer’s applications with links to both the deployed applications and the corresponding GitHub repository. The contact section contains a contact form which includes fields for name, email address and message. The Resume section comprises of a link to a downloadable resume and a list of the developer’s proficiencies. The footer displays the icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter). The application is responsive and designed using Chakra UI component library.
+This application is a single-page application portfolio for web developers built using React. The project helps developers to create a captivating showcase for their work. The application comprises of 4 sections About Me, Portfolio, Contact and Resume. The About Me section contains a photo and a short bio about the developer. The Portfolio section showcases titled images of six of the developer’s applications with links to both the deployed applications and the corresponding GitHub repository. The contact section contains a contact form which includes fields for name, email address and message. EmailJS is used to send emails through the contact form.The Resume section comprises of a link to a downloadable resume and a list of the developer’s proficiencies. The footer displays the icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter). The application is responsive and designed using Chakra UI component library.
 
 ## Installation
 
@@ -41,10 +41,11 @@ The following images show the web application's appearance and functionality :
 **Contact Me**
 
 ![P 3](./src/assets/images/p3.png)
+![P 4](./src/assets/images/p4.png)
 
 **Resume**
 
-![P 4](./src/assets/images/p4.png)
+![P 5](./src/assets/images/p5.png)
 
 ## Technologies And Tools Used
 
@@ -81,3 +82,5 @@ https://stackoverflow.com/questions/2781549/removing-input-background-colour-for
 https://stackoverflow.com/questions/70041472/chakra-ui-for-react-change-focus-bordercolor-not-work
 
 https://www.geeksforgeeks.org/how-to-trigger-a-file-download-when-clicking-an-html-button-or-javascript/
+
+https://dev.to/ebereplenty/contact-form-with-emailjs-plain-javascript-365l

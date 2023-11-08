@@ -1,6 +1,5 @@
 //importing  formik to build forms by integrating Chakra UI with Formik
 import { Field, Form, Formik } from "formik";
-import { useFormik } from "formik";
 //importing CHAKRA UI components
 import {
   Box,
@@ -17,16 +16,26 @@ import {
   Textarea,
   useColorModeValue,
   VStack,
+  useToast,
+  HStack,
+  Text,
 } from "@chakra-ui/react";
 
 // Importing  icons
-import { BsPerson } from "react-icons/bs";
-
+import { BsPerson, BsEnvelopeCheckFill } from "react-icons/bs";
+import { TbDiscountCheckFilled } from "react-icons/tb";
 import { MdOutlineEmail } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 
 // Importing a helper function that will check if the email is valid
 import { validateEmail } from "../utils/helpers";
+import React from "react";
+import { useState, useEffect } from "react";
 export default function ContactPage() {
+  const toastIdRef = React.useRef();
+  const toast = useToast();
+  //success is set to false initially
+  const [success, setSuccess] = useState(false);
   const headingColor = "rgb(217, 185, 121)";
   const fontColor = "#ccd6db";
   const borderColor = "gray.500";
@@ -37,7 +46,6 @@ export default function ContactPage() {
     if (!value) {
       error = "Name is required";
     }
-
     return error;
   }
   //function to validate message
@@ -46,7 +54,6 @@ export default function ContactPage() {
     if (!value) {
       error = "Message is required";
     }
-
     return error;
   }
 
@@ -62,11 +69,56 @@ export default function ContactPage() {
       return error;
     }
   }
-  const handleFormReset = (values) => {
-    if (window.confirm("Do You Want To Reset?")) {
-      values = {};
+  //custom toast will appear if the email is sent successfully
+  useEffect(() => {
+    if (success) {
+      toastIdRef.current = toast({
+        position: "bottom",
+        //success is set to false after closing the toast
+        onCloseComplete: () => {
+          setSuccess(false);
+        },
+        render: () => (
+          <Box
+            color="white"
+            px={4}
+            bgGradient="linear(to-b, #FFFFF0, #FFFFF0)"
+            rounded={"lg"}
+            // py={2}
+            pb={4}
+            border="5px double #1C4532"
+          >
+            <Flex justify={"flex-end"} pt={2}>
+              <Button
+                onClick={close}
+                size={6}
+                bgColor={"#276749"}
+                color={"white"}
+                _hover={{ bgColor: "green.900" }}
+                fontWeight={"semibold"}
+              >
+                <RxCross2 />
+              </Button>
+            </Flex>
+            <HStack spacing={3} py={1}>
+              <TbDiscountCheckFilled fontSize={20} color="#276749" />
+              <Text fontWeight={"semibold"} color="#1C4532">
+                Message sent successfully
+              </Text>
+            </HStack>
+          </Box>
+        ),
+      });
     }
-  };
+  }, [success]);
+  //function to close the toast
+  function close() {
+    if (toastIdRef.current) {
+      toast.close(toastIdRef.current);
+      setSuccess(false);
+    }
+  }
+
   //renders the 'Contact Me ' section
   return (
     <Flex
@@ -136,15 +188,20 @@ export default function ContactPage() {
               mt={{ base: 5, md: -10 }}
             >
               <VStack spacing={5}>
+                {/*Formik */}
                 <Formik
-                  initialValues={{}}
-                  onSubmit={(values, actions) => {
+                  initialValues={{ name: "", email: "", message: "" }}
+                  validateOnBlur={false}
+                  validateOnChange={false}
+                  onSubmit={async (values, actions) => {
                     setTimeout(() => {
-                      // alert(JSON.stringify(values, null, 2));
                       actions.setSubmitting(false);
                     }, 1000);
+
                     const serviceId = "service_tl4o2cr";
                     const templateId = "template_in6xf2c";
+
+                    //sends message to the given email id using emailjs
                     emailjs
                       .send(serviceId, templateId, {
                         message: values.message,
@@ -152,7 +209,9 @@ export default function ContactPage() {
                         email: values.email,
                       })
                       .then((res) => {
-                        console.log("Email successfully sent!");
+                        //sets the success to true
+                        setSuccess(true);
+                        actions.resetForm();
                       })
                       // Handle errors
                       .catch((err) =>
@@ -162,7 +221,6 @@ export default function ContactPage() {
                         )
                       );
                   }}
-                  onReset={handleFormReset}
                 >
                   {(props) => (
                     <Form onSubmit={props.handleSubmit}>
@@ -182,7 +240,7 @@ export default function ContactPage() {
                                 {...field}
                                 onChange={props.handleChange}
                                 onBlur={props.handleBlur}
-                                value={form.name}
+                                value={props.values.name || ""}
                                 placeholder="name"
                                 w={{ base: "auto", md: "500px", lg: "500px" }}
                                 color={fontColor}
@@ -217,7 +275,7 @@ export default function ContactPage() {
                                 {...field}
                                 onChange={props.handleChange}
                                 onBlur={props.handleBlur}
-                                value={form.email}
+                                value={props.values.email || ""}
                                 placeholder="email"
                                 color={fontColor}
                                 borderColor={borderColor}
@@ -248,6 +306,7 @@ export default function ContactPage() {
                             <Textarea
                               p={2}
                               {...field}
+                              value={props.values.message || ""}
                               name="message"
                               placeholder="Your Message"
                               rows={6}
