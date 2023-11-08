@@ -20,7 +20,7 @@ The user is presented with the 'About Me' section which includes the photo and s
 
 #### Deployed application can be found here :
 
-https://dapper-empanada-1db9b0.netlify.app/
+https://shimna-puthanayil.netlify.app/
 
 The application can be invoked in the terminal by using the following command:
 
