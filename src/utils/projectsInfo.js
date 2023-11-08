@@ -54,6 +54,21 @@ const getProjects = () => {
       ],
     },
     {
+      name: "Portfolio",
+      url: "images/portfolio.jpeg",
+      deploymentLink: "https://shimna-puthanayil.netlify.app/",
+      description:
+        "This application is a single-page application portfolio built using React for web developers to create a captivating showcase for their work.",
+      gitHubLink: "https://github.com/shimna-puthanayil/my-final-portfolio",
+      technologies: [
+        "images/rr1.png",
+        "images/no.png",
+        "images/chakra-ui.png",
+        "images/js.png",
+        "images/emailjs.webp",
+      ],
+    },
+    {
       name: "TechBlog",
       url: "images/tb.jpeg",
       deploymentLink:
@@ -71,26 +86,18 @@ const getProjects = () => {
       ],
     },
     {
-      name: "JATE",
-      url: "images/jate.jpeg",
-      deploymentLink: "https://stark-stream-59161-d25cfda68e94.herokuapp.com/",
+      name: "Book Search Engine",
+      url: "images/book-search.jpeg",
+      deploymentLink: "https://what-to-read-next-c8be256ac85a.herokuapp.com/",
       description:
         "This single-page application builds a text editor that runs in the browser and meets the PWA criteria ",
-      gitHubLink: "https://github.com/shimna-puthanayil/my-text-pad",
-      technologies: ["images/no.png", "images/exp.png", , "images/js.png"],
-    },
-
-    {
-      name: "Portfolio",
-      url: "images/portfolio.jpeg",
-      deploymentLink: "https://dapper-empanada-1db9b0.netlify.app/",
-      description:
-        "This application is a single-page application portfolio built using React for web developers to create a captivating showcase for their work.",
-      gitHubLink: "https://github.com/shimna-puthanayil/my-final-portfolio",
+      gitHubLink: "https://github.com/shimna-puthanayil/what-to-read-next",
       technologies: [
+        "images/mon.png",
+        "images/exp.png",
         "images/rr1.png",
         "images/no.png",
-        "images/chakra-ui.png",
+        "images/graph.png",
         "images/js.png",
       ],
     },

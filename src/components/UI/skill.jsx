@@ -19,7 +19,7 @@ export default function Skill({ skills, title }) {
 
       {skills.map((skill, i) => (
         <Box
-          w={300}
+          w={{ base: 250, sm: 250 }}
           borderTopLeftRadius={40}
           borderBottomRightRadius={40}
           bgGradient={[

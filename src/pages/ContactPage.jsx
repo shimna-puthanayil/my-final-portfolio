@@ -79,7 +79,7 @@ export default function ContactPage() {
         md: {
           w: "full",
           content: '""',
-          bgImage: "url(images/contact-bg.png)",
+          bgImage: "url(images/contact.png)",
           bgSize: "cover",
           pos: "absolute",
           top: 10,
@@ -88,14 +88,14 @@ export default function ContactPage() {
           bottom: 0,
           borderBottomLeftRadius: 80,
           borderTopRightRadius: 80,
-          opacity: 0.2,
+          opacity: 0.25,
         },
       }}
     >
       <Box
         borderRadius="lg"
-        m={{ base: 5, md: 16, lg: 10 }}
-        p={{ base: 5, lg: 16 }}
+        m={{ base: 5, sm: 16, md: 16, lg: 16 }}
+        p={{ base: 5, sm: 16, md: 16, lg: 16 }}
       >
         <VStack
           spacing={{ base: 4, md: 20, lg: 20 }}
@@ -108,6 +108,8 @@ export default function ContactPage() {
           w={{ base: "auto", md: "2xl", lg: "2xl" }}
           pt={50}
           pb={20}
+          backdropFilter="auto"
+          backdropBlur="8px"
         >
           <Heading
             fontSize={{ base: "2xl", md: "2xl" }}
@@ -136,7 +138,7 @@ export default function ContactPage() {
               <VStack spacing={5}>
                 <Formik
                   initialValues={{}}
-                  onSubmit={(values, actions, { resetForm }) => {
+                  onSubmit={(values, actions) => {
                     setTimeout(() => {
                       // alert(JSON.stringify(values, null, 2));
                       actions.setSubmitting(false);
@@ -151,7 +153,6 @@ export default function ContactPage() {
                       })
                       .then((res) => {
                         console.log("Email successfully sent!");
-                        resetForm({});
                       })
                       // Handle errors
                       .catch((err) =>

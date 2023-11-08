@@ -32,15 +32,12 @@ export default function ResumePage() {
     setBackEndSkills(backEndskills);
   };
 
-  // When the component mounts to the VDOM, run this callback to retrieve  all front end skills
+  // When the component mounts to the VDOM, run this callback to retrieve  all front end skills and all back end skills
   useEffect(() => {
     getFrontEndSkills();
-  }, []);
-
-  // When the component mounts to the VDOM, run this callback to retrieve  all back end skills
-  useEffect(() => {
     getBackEndSkills();
   }, []);
+
   return (
     <Flex align="center" justify="center">
       <Box
@@ -92,11 +89,11 @@ export default function ResumePage() {
               direction={{ base: "column", md: "row" }}
             >
               {/*front end skills */}
-              <VStack spacing={3} align="center" w={300}>
+              <VStack spacing={3} align="center" w={ 300 }>
                 <Skill skills={frontEndskills} title=" Frontend Skills" />
               </VStack>
               {/*back end skills */}
-              <VStack spacing={3} align="center" w={300}>
+              <VStack spacing={3} align="center" w={ 300 }>
                 <Skill skills={backEndskills} title=" Backend Skills" />
               </VStack>
             </Stack>
