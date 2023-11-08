@@ -90,7 +90,7 @@ const getProjects = () => {
       url: "images/book-search.jpeg",
       deploymentLink: "https://what-to-read-next-c8be256ac85a.herokuapp.com/",
       description:
-        "This single-page application builds a text editor that runs in the browser and meets the PWA criteria ",
+        "This application is a Google Books API search using GraphQL API built with Apollo Server.",
       gitHubLink: "https://github.com/shimna-puthanayil/what-to-read-next",
       technologies: [
         "images/mon.png",

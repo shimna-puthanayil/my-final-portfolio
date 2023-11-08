@@ -30,8 +30,6 @@ npm start
 
 The following images show the web application's appearance and functionality :
 
-![P 1](./src/assets/images/portfolio.gif)
-
 **About Me**
 
 ![P 1](./src/assets/images/p1.png)
@@ -57,6 +55,8 @@ The following images show the web application's appearance and functionality :
 - **Vite**
 
 - **Node JS**
+
+- **EmailJS**
 
 - **JavaScript**
 
