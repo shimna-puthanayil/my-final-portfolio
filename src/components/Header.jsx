@@ -95,12 +95,18 @@ export default function Header() {
             currentPage={currentPage}
             handlePageChange={handlePageChange}
             links={[
-              <Link align={"center"} to="/">
+              <Link onClick={() => handlePageChange(0)} align={"center"} to="/">
                 About
               </Link>,
-              <Link to="/Portfolio">Portfolio</Link>,
-              <Link to="/Contact">Contact</Link>,
-              <Link to="/Resume">Resume</Link>,
+              <Link onClick={() => handlePageChange(1)} to="/Portfolio">
+                Portfolio
+              </Link>,
+              <Link onClick={() => handlePageChange(2)} to="/Contact">
+                Contact
+              </Link>,
+              <Link onClick={() => handlePageChange(3)} to="/Resume">
+                Resume
+              </Link>,
             ]}
           />
         </Box>
