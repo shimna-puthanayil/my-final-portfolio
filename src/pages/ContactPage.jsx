@@ -22,7 +22,7 @@ import {
 } from "@chakra-ui/react";
 
 // Importing  icons
-import { BsPerson, BsEnvelopeCheckFill } from "react-icons/bs";
+import { BsPerson } from "react-icons/bs";
 import { TbDiscountCheckFilled } from "react-icons/tb";
 import { MdOutlineEmail } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
@@ -163,17 +163,23 @@ export default function ContactPage() {
           backdropFilter="auto"
           backdropBlur="8px"
         >
-          <Heading
-            fontSize={{ base: "2xl", md: "2xl" }}
-            fontFamily={"body"}
-            fontWeight={500}
-            color={headingColor}
-            mt={{ base: "70px", md: "0px" }}
-            zIndex={1}
-          >
-            Contact Me
-          </Heading>
+          <VStack spacing={{ base: 4, md: 5, lg: 5 }}>
+            <Heading
+              fontSize={{ base: "2xl", md: "2xl" }}
+              fontFamily={"body"}
+              fontWeight={500}
+              color={headingColor}
+              mt={{ base: "70px", md: "0px" }}
+              zIndex={1}
+            >
+              Contact Me
+            </Heading>
+            <HStack>
+              <MdOutlineEmail color="#ccd6db" m={5} />
 
+              <Text color={fontColor}>shimna.pu@gmail.com</Text>
+            </HStack>
+          </VStack>
           <Stack
             spacing={{ base: 20, md: 8, lg: 20 }}
             direction={{ base: "column", md: "row" }}
@@ -330,7 +336,6 @@ export default function ContactPage() {
                         colorScheme="black"
                         isLoading={props.isSubmitting}
                         type="submit"
-                        // bgGradient={["linear(to-b, gray.600, gray.800)"]}
                         bgGradient={[
                           "linear(to-b, gray.700,gray.800,  gray.800,gray.700)",
                         ]}
