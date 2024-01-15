@@ -19,6 +19,23 @@ const getProjects = () => {
       ],
     },
     {
+      name: "FixIt",
+      url: "images/fixit.png",
+      deploymentLink: "https://rentals-fix-it-015339fa2e18.herokuapp.com/",
+      description:
+        "FixIt is a platform for rental agents, owners and tenants to effectively manage the property maintenance tasks. This is a single page MERN application. ",
+      gitHubLink: "https://github.com/shimna-puthanayil/fix-it",
+      technologies: [
+        "images/mon.png",
+        "images/exp.png",
+        "images/rr1.png",
+        "images/no.png",
+        "images/mui.png",
+        "images/graph.png",
+        "images/js.png",
+      ],
+    },
+    {
       name: "RecipeBox",
       url: "images/rb.jpeg",
       deploymentLink:
@@ -40,7 +57,7 @@ const getProjects = () => {
     {
       name: "JustMovie",
       url: "images/jm.jpeg",
-      deploymentLink: "https://shimna-puthanayil.github.io/movie-world/",
+      deploymentLink: "https://sakshiarora04.github.io/just-movie/",
       description:
         "JustMovie is a movie website displaying a range of movies in conjunction with their ratings and reviews, enabling users to search for movies by title or through a series of categories including genre. ",
       gitHubLink: "https://github.com/sakshiarora04/just-movie",
@@ -82,22 +99,6 @@ const getProjects = () => {
         "images/my.png",
         "images/h.png",
         "images/bs.jpeg",
-        "images/js.png",
-      ],
-    },
-    {
-      name: "Book Search Engine",
-      url: "images/book-search.jpeg",
-      deploymentLink: "https://what-to-read-next-c8be256ac85a.herokuapp.com/",
-      description:
-        "This application is a Google Books API search using GraphQL API built with Apollo Server.",
-      gitHubLink: "https://github.com/shimna-puthanayil/what-to-read-next",
-      technologies: [
-        "images/mon.png",
-        "images/exp.png",
-        "images/rr1.png",
-        "images/no.png",
-        "images/graph.png",
         "images/js.png",
       ],
     },
