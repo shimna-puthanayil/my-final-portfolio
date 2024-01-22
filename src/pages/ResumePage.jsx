@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 
 import resumePath from "./assets/Shimna-Resume.pdf";
+
 import skillsInfo from "../utils/skillsInfo";
 import { useState, useEffect } from "react";
 
@@ -89,11 +90,11 @@ export default function ResumePage() {
               direction={{ base: "column", md: "row" }}
             >
               {/*front end skills */}
-              <VStack spacing={3} align="center" w={ 300 }>
+              <VStack spacing={3} align="center" w={300}>
                 <Skill skills={frontEndskills} title=" Frontend Skills" />
               </VStack>
               {/*back end skills */}
-              <VStack spacing={3} align="center" w={ 300 }>
+              <VStack spacing={3} align="center" w={300}>
                 <Skill skills={backEndskills} title=" Backend Skills" />
               </VStack>
             </Stack>
