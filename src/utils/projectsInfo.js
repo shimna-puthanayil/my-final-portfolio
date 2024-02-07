@@ -4,7 +4,7 @@ const getProjects = () => {
     {
       name: "SparkShopper",
       url: "images/e-com.jpeg",
-      deploymentLink: "https://spark-shopper-c35a92bbd283.herokuapp.com/",
+      deploymentLink: "https://spark--shopper-02f002a5a4ff.herokuapp.com/",
       description:
         "Spark Shopper is an e-commerce application feature-packed with efficient search, easy registration, quick cart additions, share your thoughts, manage your wish list, order history and swift check out. ",
       gitHubLink: "https://github.com/Tristenh/spark-shopper",

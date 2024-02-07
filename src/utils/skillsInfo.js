@@ -8,6 +8,7 @@ const getFrontEndSkills = () => {
     "React",
     "BootStrap",
     "Chakra UI",
+    "Material UI",
     "Handlebars",
     "Responsive Design",
   ];
