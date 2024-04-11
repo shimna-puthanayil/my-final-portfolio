@@ -38,8 +38,7 @@ const getProjects = () => {
     {
       name: "RecipeBox",
       url: "images/rb.jpeg",
-      deploymentLink:
-        "https://powerful-sierra-12005-787af3607f3d.herokuapp.com/",
+      deploymentLink: "https://recipe--box-a54e92522d3b.herokuapp.com/",
       description:
         "RecipeBox is a user-friendly platform designed to bridge the gap between food enthusiasts and professional chefs. This project followed the MVC paradigm in its architectural structure",
       gitHubLink: "https://github.com/J-D-garwood/recipe-forum",
