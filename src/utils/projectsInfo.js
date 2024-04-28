@@ -21,7 +21,8 @@ const getProjects = () => {
     {
       name: "FixIt",
       url: "images/fixit.png",
-      deploymentLink: "https://rentals-fix-it-015339fa2e18.herokuapp.com/",
+      deploymentLink:
+        "http://ec2-3-27-148-98.ap-southeast-2.compute.amazonaws.com/",
       description:
         "FixIt is a platform for rental agents, owners and tenants to effectively manage the property maintenance tasks. This is a single page MERN application. ",
       gitHubLink: "https://github.com/shimna-puthanayil/fix-it",
