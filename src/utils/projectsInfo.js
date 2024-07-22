@@ -34,6 +34,7 @@ const getProjects = () => {
         "images/mui.png",
         "images/graph.png",
         "images/js.png",
+        "images/aws.png",
       ],
     },
     {

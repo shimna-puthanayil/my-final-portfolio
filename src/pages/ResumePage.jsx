@@ -11,7 +11,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 
-import resumePath from "./assets/Shimna Puthanayil-Resume.pdf";
+import resumePath from "./assets/Shimna Puthanayil - Resume.pdf";
 
 import skillsInfo from "../utils/skillsInfo";
 import { useState, useEffect } from "react";
