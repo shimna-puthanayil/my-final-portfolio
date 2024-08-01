@@ -1,32 +1,31 @@
-//This function returns the front end skills to display in the section 'Resume'
-const getFrontEndSkills = () => {
-  const frontEndSkills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "jQuery",
-    "React",
-    "BootStrap",
-    "Chakra UI",
-    "Material UI",
-    "Handlebars",
-    "Responsive Design",
+//This function returns the skills to display in the section 'Resume'
+const getSkills = () => {
+  const skills = [
+    //front end
+    "React,images/rr1.png",
+    "JavaScript,images/js.png",
+    "HTML,images/htm.png",
+    "CSS,images/cs.webp",
+    "jQuery,images/jq.webp",
+    "Chakra UI,images/chakra-ui.png",
+    "Material UI,images/mui.png",
+    "BootStrap,images/boot.png",
+    "Responsive Design,images/resp.png",
+    //backend
+    "Node,images/njs.png",
+    "Express,images/e.webp",
+    "APIs,images/api.png",
+    "MySQL Sequalize,images/my.png",
+    "MongoDB Mongoose,images/mong.png",
+    "GraphQL,images/grr.webp",
+    //others
+    "AWS S3 & EC2,images/aws.png",
+    "CI/CD,images/ci.png",
+    "Git,images/git.png",
   ];
-  return frontEndSkills;
+  return skills;
 };
-//This function returns the back end skills to display in the section 'Resume'
-const getBackEndSkills = () => {
-  const backEndSkills = [
-    "Node",
-    "Express",
-    "APIs",
-    "MySQL Sequalize",
-    "MongoDB Mongoose",
-    "GraphQL",
-  ];
-  return backEndSkills;
-};
+
 export default {
-  getFrontEndSkills,
-  getBackEndSkills,
+  getSkills,
 };

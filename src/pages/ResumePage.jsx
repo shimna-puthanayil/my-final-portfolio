@@ -5,10 +5,10 @@ import {
   Box,
   Flex,
   Heading,
-  Stack,
   useColorModeValue,
   VStack,
   Link,
+  Grid,
 } from "@chakra-ui/react";
 
 import resumePath from "./assets/Shimna Puthanayil - Resume.pdf";
@@ -21,29 +21,22 @@ export default function ResumePage() {
   const headingColor = "rgb(217, 185, 121)";
   const fontColor = "#ccd6db";
 
-  const [frontEndskills, setFrontEndSkills] = useState([]);
-  const [backEndskills, setBackEndSkills] = useState([]);
-  const getFrontEndSkills = () => {
-    const frontEndskills = skillsInfo.getFrontEndSkills();
-    setFrontEndSkills(frontEndskills);
-  };
-
-  const getBackEndSkills = () => {
-    const backEndskills = skillsInfo.getBackEndSkills();
-    setBackEndSkills(backEndskills);
+  const [skills, setSkills] = useState([]);
+  const getSkills = () => {
+    const skills = skillsInfo.getSkills();
+    setSkills(skills);
   };
 
   // When the component mounts to the VDOM, run this callback to retrieve  all front end skills and all back end skills
   useEffect(() => {
-    getFrontEndSkills();
-    getBackEndSkills();
+    getSkills();
   }, []);
 
   return (
     <Flex align="center" justify="center">
       <Box
         borderRadius="lg"
-        m={{ base: "auto", md: 16, lg: 10 }}
+        m={{ base: "auto", md: 20, lg: 10 }}
         p={{ base: "auto", lg: 16 }}
       >
         <VStack
@@ -53,7 +46,7 @@ export default function ResumePage() {
             md: "linear(to-b, gray.900, gray.800,gray.700)",
             base: "black",
           }}
-          mt={90}
+          mt={{ base: 4, md: 120, lg: 90 }}
           w={{ base: "auto", md: "2xl", lg: "4xl" }}
           pt={50}
           pb={20}
@@ -84,20 +77,35 @@ export default function ResumePage() {
             shadow="base"
             w={{ base: "auto", md: "600px", lg: "750px" }}
             mt={{ base: 5, md: -10 }}
+            align="center"
           >
-            <Stack
-              spacing={{ base: 4, md: 8, lg: 20 }}
-              direction={{ base: "column", md: "row" }}
+            <Heading
+              fontSize={{ base: "xl", md: "xl" }}
+              fontFamily={"body"}
+              fontWeight={500}
+              color={headingColor}
+              mt={{ base: 1, md: 1 }}
+              mb={2}
+              alignContent={"Center"}
             >
-              {/*front end skills */}
-              <VStack spacing={3} align="center" w={300}>
-                <Skill skills={frontEndskills} title=" Frontend Skills" />
-              </VStack>
-              {/*back end skills */}
-              <VStack spacing={3} align="center" w={300}>
-                <Skill skills={backEndskills} title=" Backend Skills" />
-              </VStack>
-            </Stack>
+              Skills
+            </Heading>
+            <Grid
+              gap={1}
+              templateRows={{
+                base: "repeat(1, 1fr)",
+                md: "repeat(2, 1fr)",
+                lg: "repeat(3, 1fr)",
+              }}
+              templateColumns={{
+                base: "repeat(1, 1fr)",
+                md: "repeat(2, 1fr)",
+                lg: "repeat(3, 1fr)",
+              }}
+            >
+              {/* skills */}
+              <Skill skills={skills} />
+            </Grid>
           </Box>
         </VStack>
       </Box>

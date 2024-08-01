@@ -25,7 +25,7 @@ export default function Header() {
           lg: "space-between",
         }}
         height={{ base: 200, sm: 200, md: 200, lg: 100 }}
-        bg={"gray.800"}
+        bg={"gray.900"}
         width="100%"
         zIndex={2}
       >

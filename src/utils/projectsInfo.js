@@ -2,23 +2,6 @@
 const getProjects = () => {
   const projects = [
     {
-      name: "SparkShopper",
-      url: "images/e-com.jpeg",
-      deploymentLink: "https://spark--shopper-02f002a5a4ff.herokuapp.com/",
-      description:
-        "Spark Shopper is an e-commerce application feature-packed with efficient search, easy registration, quick cart additions, share your thoughts, manage your wish list, order history and swift check out. ",
-      gitHubLink: "https://github.com/Tristenh/spark-shopper",
-      technologies: [
-        "images/mon.png",
-        "images/exp.png",
-        "images/rr1.png",
-        "images/no.png",
-        "images/chakra-ui.png",
-        "images/graph.png",
-        "images/stripe.png",
-      ],
-    },
-    {
       name: "FixIt",
       url: "images/fixit.png",
       deploymentLink:
@@ -38,6 +21,24 @@ const getProjects = () => {
       ],
     },
     {
+      name: "SparkShopper",
+      url: "images/e-com.jpeg",
+      deploymentLink: "https://spark--shopper-02f002a5a4ff.herokuapp.com/",
+      description:
+        "Spark Shopper is an e-commerce application feature-packed with efficient search, easy registration, quick cart additions, share your thoughts, manage your wish list, order history and swift check out. ",
+      gitHubLink: "https://github.com/Tristenh/spark-shopper",
+      technologies: [
+        "images/mon.png",
+        "images/exp.png",
+        "images/rr1.png",
+        "images/no.png",
+        "images/chakra-ui.png",
+        "images/graph.png",
+        "images/stripe.png",
+      ],
+    },
+
+    {
       name: "RecipeBox",
       url: "images/rb.jpeg",
       deploymentLink: "https://recipe--box-a54e92522d3b.herokuapp.com/",
@@ -47,9 +48,8 @@ const getProjects = () => {
       technologies: [
         "images/no.png",
         "images/exp.png",
-        "images/my.png",
+        "images/mys.webp",
         "images/h.png",
-
         "images/bs.jpeg",
         "images/jquery.png",
         "images/js.png",
@@ -97,7 +97,7 @@ const getProjects = () => {
       technologies: [
         "images/no.png",
         "images/exp.png",
-        "images/my.png",
+        "images/mys.webp",
         "images/h.png",
         "images/bs.jpeg",
         "images/js.png",
