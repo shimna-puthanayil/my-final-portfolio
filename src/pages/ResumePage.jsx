@@ -41,14 +41,14 @@ export default function ResumePage() {
       >
         <VStack
           spacing={{ base: 4, md: 20, lg: 20 }}
-          borderRadius="lg"
+          borderRadius="3xl"
           bgGradient={{
             md: "linear(to-b, gray.900, gray.800,gray.700)",
             base: "black",
           }}
-          mt={{ base: 4, md: 120, lg: 90 }}
+          mt={{ base: 4, md: 120, lg: 50 }}
           w={{ base: "auto", md: "2xl", lg: "4xl" }}
-          pt={50}
+          pt={10}
           pb={20}
         >
           <Heading
@@ -62,7 +62,8 @@ export default function ResumePage() {
             <Link
               href={resumePath}
               download="Resume"
-              color={headingColor}
+              bgGradient="linear(to-r,yellow.400,orange.300)"
+              bgClip={"text"}
               ml={2}
             >
               Resume
@@ -72,10 +73,12 @@ export default function ResumePage() {
           <Box
             bg={useColorModeValue("gray.900", "gray.700")}
             borderRadius="3xl"
-            p={8}
+            pb={8}
+            pl={8}
+            pr={8}
             color={useColorModeValue("gray.700", "whiteAlpha.900")}
             shadow="base"
-            w={{ base: "auto", md: "600px", lg: "750px" }}
+            w={{ base: "auto", md: "600px", lg: "800px" }}
             mt={{ base: 5, md: -10 }}
             align="center"
           >
@@ -83,13 +86,15 @@ export default function ResumePage() {
               fontSize={{ base: "xl", md: "xl" }}
               fontFamily={"body"}
               fontWeight={500}
-              color={headingColor}
+              bgGradient="linear(to-r,yellow.400,orange.300)"
+              bgClip={"text"}
               mt={{ base: 1, md: 1 }}
               mb={2}
               alignContent={"Center"}
             >
               Skills
             </Heading>
+
             <Grid
               gap={1}
               templateRows={{
@@ -102,6 +107,7 @@ export default function ResumePage() {
                 md: "repeat(2, 1fr)",
                 lg: "repeat(3, 1fr)",
               }}
+              pt={6}
             >
               {/* skills */}
               <Skill skills={skills} />

@@ -11,7 +11,6 @@ import {
   Divider,
   Flex,
   IconButton,
-  HStack,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
@@ -23,7 +22,6 @@ import { FaGithub } from "react-icons/fa6";
 export default function Project({
   project: { name, url, deploymentLink, description, gitHubLink, technologies },
 }) {
-  const fontColor = "rgb(217, 185, 121)";
   return (
     <>
       <Center pt={10}>
@@ -49,7 +47,8 @@ export default function Project({
               fontSize={"2xl"}
               fontFamily={"body"}
               fontWeight={500}
-              color={fontColor}
+              bgGradient="linear(to-r,yellow.400,orange.300)"
+              bgClip={"text"}
             >
               {name}
             </Heading>

@@ -39,7 +39,8 @@ export default function TextAnimation() {
             as={motion.div}
             animation={`${animationKeyframes} 2s ease-in-out infinite`}
             pl="2"
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             W
@@ -47,7 +48,8 @@ export default function TextAnimation() {
           <Box
             as={motion.div}
             animation={`${animationKeyframes} 3s ease-in-out infinite`}
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             e
@@ -55,7 +57,8 @@ export default function TextAnimation() {
           <Box
             as={motion.div}
             animation={`${animationKeyframes} 4s ease-in-out infinite`}
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             b
@@ -64,7 +67,8 @@ export default function TextAnimation() {
             as={motion.div}
             animation={`${animationKeyframes} 2s ease-in-out infinite`}
             pl="2"
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             D
@@ -72,7 +76,8 @@ export default function TextAnimation() {
           <Box
             as={motion.div}
             animation={`${animationKeyframes} 3s ease-in-out infinite`}
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             e
@@ -80,7 +85,8 @@ export default function TextAnimation() {
           <Box
             as={motion.div}
             animation={`${animationKeyframes} 4s ease-in-out infinite`}
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             v
@@ -88,7 +94,8 @@ export default function TextAnimation() {
           <Box
             as={motion.div}
             animation={`${animationKeyframes} 2s ease-in-out infinite`}
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             e
@@ -96,7 +103,8 @@ export default function TextAnimation() {
           <Box
             as={motion.div}
             animation={`${animationKeyframes} 3s ease-in-out infinite`}
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             l
@@ -104,7 +112,8 @@ export default function TextAnimation() {
           <Box
             as={motion.div}
             animation={`${animationKeyframes} 4s ease-in-out infinite`}
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             o
@@ -112,7 +121,8 @@ export default function TextAnimation() {
           <Box
             as={motion.div}
             animation={`${animationKeyframes} 2s ease-in-out infinite`}
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             p
@@ -120,7 +130,8 @@ export default function TextAnimation() {
           <Box
             as={motion.div}
             animation={`${animationKeyframes} 3s ease-in-out infinite`}
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             e
@@ -128,7 +139,8 @@ export default function TextAnimation() {
           <Box
             as={motion.div}
             animation={`${animationKeyframes} 4s ease-in-out infinite`}
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
             sx={commonStyles}
           >
             r

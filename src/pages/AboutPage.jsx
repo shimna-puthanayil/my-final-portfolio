@@ -7,14 +7,12 @@ import {
   keyframes,
   Box,
   Avatar,
-  Center,
 } from "@chakra-ui/react";
 //import component TextAnimation from components folder
 import TextAnimation from "../components/UI/TextAnimation";
 
 //renders the 'About Me ' section
 export default function AboutPage() {
-  const fontColor = "rgb(217, 185, 121)";
   const size = "300px";
   const color = "#2D3748";
   const pulseRing = keyframes`
@@ -44,7 +42,8 @@ export default function AboutPage() {
         fontWeight={500}
         mb={50}
         mt={{ base: "220px", md: "100px" }}
-        color={fontColor}
+        bgGradient="linear(to-r,yellow.400,orange.300)"
+        bgClip={"text"}
       >
         About Me
       </Heading>

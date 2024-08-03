@@ -83,7 +83,8 @@ export default function Header() {
                 fontSize={"2xl"}
                 fontFamily={"body"}
                 fontWeight={500}
-                color=" rgb(217, 185, 121)"
+                bgGradient="linear(to-r,yellow.400,orange.300)"
+                bgClip={"text"}
               >
                 Shimna Puthanayil
               </Heading>

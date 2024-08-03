@@ -1,5 +1,5 @@
 //importing CHAKRA UI components
-import { HStack, Link, IconButton, Box } from "@chakra-ui/react";
+import { HStack, Link, IconButton } from "@chakra-ui/react";
 import {
   FaGithub,
   FaTwitter,
@@ -11,6 +11,7 @@ const gitHubLink = "https://github.com/shimna-puthanayil";
 const linkedInLink = "https://www.linkedin.com/in/shimna-puthanayil-766727173/";
 const twitterLink = "https://twitter.com/Shimna_Anoop";
 const instagramLink = "https://www.instagram.com/quirky.shots";
+const iconColor = "yellow.400";
 export default function Footer() {
   // The Footer component will render the links to github, linkedIn and Twitter
   return (
@@ -26,7 +27,7 @@ export default function Footer() {
           <IconButton
             bgColor={"gray.900"}
             size={"22px"}
-            color={"rgb(217, 185, 121)"}
+            color={iconColor}
             isRound={true}
             variant="solid"
             aria-label="Done"
@@ -43,7 +44,7 @@ export default function Footer() {
           <IconButton
             bgColor={"gray.900"}
             size={"22px"}
-            color={"rgb(217, 185, 121)"}
+            color={iconColor}
             isRound={true}
             variant="solid"
             aria-label="Done"
@@ -60,7 +61,7 @@ export default function Footer() {
           <IconButton
             bgColor={"gray.900"}
             size={"22px"}
-            color={"rgb(217, 185, 121)"}
+            color={iconColor}
             isRound={true}
             variant="solid"
             aria-label="Done"
@@ -77,7 +78,7 @@ export default function Footer() {
           <IconButton
             bgColor={"gray.900"}
             size={"22px"}
-            color={"rgb(217, 185, 121)"}
+            color={iconColor}
             isRound={true}
             variant="solid"
             aria-label="Done"

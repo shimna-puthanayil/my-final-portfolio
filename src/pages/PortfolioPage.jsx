@@ -41,7 +41,8 @@ export default function PortfolioPage() {
             fontSize={"2xl"}
             fontFamily={"body"}
             fontWeight={500}
-            color={fontColor}
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
           >
             Portfolio
           </Heading>

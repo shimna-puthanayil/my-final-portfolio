@@ -19,6 +19,8 @@ import {
   useToast,
   HStack,
   Text,
+  Image,
+  Link,
 } from "@chakra-ui/react";
 
 // Importing  icons
@@ -36,7 +38,6 @@ export default function ContactPage() {
   const toast = useToast();
   //success is set to false initially
   const [success, setSuccess] = useState(false);
-  const headingColor = "rgb(217, 185, 121)";
   const fontColor = "#ccd6db";
   const borderColor = "gray.500";
   const borderColorOnFocus = "gray.100";
@@ -151,7 +152,7 @@ export default function ContactPage() {
       >
         <VStack
           spacing={{ base: 4, md: 20, lg: 20 }}
-          borderRadius="lg"
+          borderRadius="3xl"
           bgGradient={{
             md: "linear(to-b, gray.900, gray.700)",
             base: "black",
@@ -168,16 +169,94 @@ export default function ContactPage() {
               fontSize={{ base: "2xl", md: "2xl" }}
               fontFamily={"body"}
               fontWeight={500}
-              color={headingColor}
+              bgGradient="linear(to-r,yellow.400,orange.300)"
+              bgClip={"text"}
               mt={{ base: "70px", md: "0px" }}
+              mb={{ base: "70px", md: "10px" }}
               zIndex={1}
             >
-              Contact Me
+              Contact
             </Heading>
+            <Heading
+              fontSize={{ base: "2xl", md: "lg" }}
+              fontFamily={"body"}
+              fontWeight={500}
+              color={fontColor}
+              mt={{ base: "70px", md: "0px" }}
+              mb={{ base: "70px", md: "10px" }}
+              zIndex={1}
+            >
+              Get in touch with me via social media or email
+            </Heading>
+            {/*Linkedin link */}
             <HStack>
-              <MdOutlineEmail color="#ccd6db" m={5} />
+              <Link
+                href={
+                  "https://www.linkedin.com/in/shimna-puthanayil-766727173/"
+                }
+                isExternal
+              >
+                <HStack mr={8}>
+                  <Image
+                    mt={{ base: 0, md: 0 }}
+                    mb={{ base: 3, md: 0 }}
+                    rounded={"lg"}
+                    height={{ base: 10, md: 10 }}
+                    width={{ base: "50px", md: "50px" }}
+                    objectFit={"contain"}
+                    src={"images/innl.png"}
+                  ></Image>
+                  <Text
+                    fontWeight={"medium"}
+                    bgGradient="linear(to-r,yellow.400,orange.300)"
+                    bgClip={"text"}
+                  >
+                    LinkedIn
+                  </Text>
+                </HStack>
+              </Link>
+              {/*email id */}
+              <HStack mr={8}>
+                <Image
+                  mt={{ base: 0, md: 0 }}
+                  mb={{ base: 3, md: 0 }}
+                  rounded={"lg"}
+                  height={{ base: 10, md: 10 }}
+                  width={{ base: "50px", md: "50px" }}
+                  objectFit={"contain"}
+                  src={"images/telegram.png"}
+                ></Image>
 
-              <Text color={fontColor}>shimna.pu@gmail.com</Text>
+                <Text
+                  fontWeight={"medium"}
+                  bgGradient="linear(to-r,yellow.400,orange.300)"
+                  bgClip={"text"}
+                >
+                  shimna.pu@gmail.com
+                </Text>
+              </HStack>
+              {/*instagram link */}
+              <Link href={"https://www.instagram.com/quirky.shots"} isExternal>
+                <HStack mr={8}>
+                  <Image
+                    mt={{ base: 0, md: 0 }}
+                    mb={{ base: 3, md: 0 }}
+                    rounded={"lg"}
+                    height={{ base: 10, md: 10 }}
+                    width={{ base: "50px", md: "50px" }}
+                    objectFit={"contain"}
+                    src={"images/inss.png"}
+                  ></Image>
+
+                  <Text
+                    fontWeight={"medium"}
+                    bgGradient="linear(to-r,yellow.400,orange.300)"
+                    bgClip={"text"}
+                  >
+                    Instagram
+                  </Text>
+                </HStack>
+              </Link>
             </HStack>
           </VStack>
           <Stack
