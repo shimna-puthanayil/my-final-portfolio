@@ -10,7 +10,6 @@ import {
 //Importing the required component for linking between pages
 
 import Project from "../components/UI/ProjectSections/Project";
-
 import projectsInfo from "../utils/projectsInfo";
 
 export default function PortfolioPage() {
@@ -33,7 +32,7 @@ export default function PortfolioPage() {
       <Container maxW="1100px" height={"auto"} bg="black" centerContent>
         <Stack
           align={"center"}
-          mt={{ base: "152px", md: "50px" }}
+          mt={{ base: "150px", md: "150px", lg: "50px" }}
           pb={10}
           pt={102}
         >

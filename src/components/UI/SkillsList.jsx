@@ -1,5 +1,5 @@
 //importing the component Skill from components folder
-import Skill from "../components/UI/skill";
+import Skill from "../UI/skill";
 //importing CHAKRA UI components
 import {
   Box,
@@ -11,14 +11,13 @@ import {
   Grid,
 } from "@chakra-ui/react";
 
-import resumePath from "./assets/Shimna Puthanayil - Resume.pdf";
-
-import skillsInfo from "../utils/skillsInfo";
+// import resumePath from "./assets/Shimna Puthanayil - Resume.pdf";
+import resumePath from "../../pages/assets/Shimna Puthanayil - Resume.pdf";
+import skillsInfo from "../../utils/skillsInfo";
 import { useState, useEffect } from "react";
 
 // This function renders the section for Resume
-export default function ResumePage() {
-  const headingColor = "rgb(217, 185, 121)";
+export default function SkillsList() {
   const fontColor = "#ccd6db";
 
   const [skills, setSkills] = useState([]);
@@ -36,50 +35,31 @@ export default function ResumePage() {
     <Flex align="center" justify="center">
       <Box
         borderRadius="lg"
-        m={{ base: "auto", md: 20, lg: 10 }}
-        p={{ base: "auto", lg: 16 }}
+        m={{ base: "auto", md: 20, lg: 0 }}
+        p={{ base: "auto", lg: 0 }}
+        align="center"
       >
         <VStack
           spacing={{ base: 4, md: 20, lg: 20 }}
           borderRadius="3xl"
           bgGradient={{
-            md: "linear(to-b, gray.900, gray.800,gray.700)",
+            md: "linear(to-b, gray.900, gray.800,gray.800)",
             base: "black",
           }}
-          mt={{ base: 4, md: 150, lg: 55 }}
+          mt={{ base: 0, md: 120, lg: 50 }}
           w={{ base: "auto", md: "2xl", lg: "4xl" }}
           pt={10}
-          pb={20}
+          pb={12}
         >
-          <Heading
-            fontSize={{ base: "md", md: "xl" }}
-            fontFamily={"body"}
-            fontWeight={500}
-            color={fontColor}
-            mt={{ base: "200px", md: "0px" }}
-          >
-            Download My
-            <Link
-              href={resumePath}
-              download="Resume"
-              bgGradient="linear(to-r,yellow.400,orange.300)"
-              bgClip={"text"}
-              ml={2}
-            >
-              Resume
-            </Link>
-          </Heading>
-
           <Box
             bg={useColorModeValue("gray.900", "gray.700")}
             borderRadius="3xl"
             pb={8}
-            pl={8}
-            pr={8}
+            px={8}
             color={useColorModeValue("gray.700", "whiteAlpha.900")}
             shadow="base"
             w={{ base: "auto", md: "600px", lg: "800px" }}
-            mt={{ base: 5, md: -10 }}
+            mt={{ base: 0, md: -250, lg: -16 }}
             align="center"
           >
             <Heading
@@ -88,7 +68,7 @@ export default function ResumePage() {
               fontWeight={500}
               bgGradient="linear(to-r,yellow.400,orange.300)"
               bgClip={"text"}
-              mt={{ base: 6, md: 1 }}
+              mt={{ base: 6, md: 10, lg: 1 }}
               mb={{ base: -3, md: 1 }}
               alignContent={"Center"}
             >
@@ -114,6 +94,24 @@ export default function ResumePage() {
             </Grid>
           </Box>
         </VStack>
+        <Heading
+          fontSize={{ base: "md", md: "xl" }}
+          fontFamily={"body"}
+          fontWeight={400}
+          color={fontColor}
+          mt={{ base: "-50px", md: "50px" }}
+        >
+          Download My
+          <Link
+            href={resumePath}
+            download="Resume"
+            bgGradient="linear(to-r,yellow.400,orange.300)"
+            bgClip={"text"}
+            ml={2}
+          >
+            Resume
+          </Link>
+        </Heading>
       </Box>
     </Flex>
   );

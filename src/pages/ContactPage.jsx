@@ -21,8 +21,11 @@ import {
   Text,
   Image,
   Link,
+  SlideFade,
+  ScaleFade,
 } from "@chakra-ui/react";
-
+import React, { useRef } from "react";
+import { useInViewport } from "react-in-viewport";
 // Importing  icons
 import { BsPerson } from "react-icons/bs";
 import { TbDiscountCheckFilled } from "react-icons/tb";
@@ -31,9 +34,16 @@ import { RxCross2 } from "react-icons/rx";
 
 // Importing a helper function that will check if the email is valid
 import { validateEmail } from "../utils/helpers";
-import React from "react";
+
 import { useState, useEffect } from "react";
 export default function ContactPage() {
+  const ref = useRef(null);
+  const { enterCount } = useInViewport(
+    ref,
+    { rootMargin: "-10px" },
+    { disconnectOnLeave: false },
+    {}
+  );
   const toastIdRef = React.useRef();
   const toast = useToast();
   //success is set to false initially
@@ -157,7 +167,7 @@ export default function ContactPage() {
             md: "linear(to-b, gray.900, gray.700)",
             base: "black",
           }}
-          mt={90}
+          mt={{ base: 90, md: 100, lg: 30 }}
           w={{ base: "auto", md: "2xl", lg: "2xl" }}
           pt={50}
           pb={20}
@@ -165,100 +175,137 @@ export default function ContactPage() {
           backdropBlur="8px"
         >
           <VStack spacing={{ base: 4, md: 5, lg: 5 }}>
-            <Heading
-              fontSize={{ base: "2xl", md: "2xl" }}
-              fontFamily={"body"}
-              fontWeight={500}
-              bgGradient="linear(to-r,yellow.400,orange.300)"
-              bgClip={"text"}
-              mt={{ base: "70px", md: "0px" }}
-              mb={{ base: "70px", md: "10px" }}
-              zIndex={1}
-            >
-              Contact
-            </Heading>
-            <Heading
-              fontSize={{ base: "2xl", md: "lg" }}
-              fontFamily={"body"}
-              fontWeight={500}
-              color={fontColor}
-              mt={{ base: "70px", md: "0px" }}
-              mb={{ base: "70px", md: "10px" }}
-              zIndex={1}
-            >
-              Get in touch with me via social media or email
-            </Heading>
-            {/*Linkedin link */}
-            <HStack>
-              <Link
-                href={
-                  "https://www.linkedin.com/in/shimna-puthanayil-766727173/"
-                }
-                isExternal
+            <SlideFade offsetY="100px" in={enterCount > 0}>
+              <Heading
+                ref={ref}
+                fontSize={{ base: "2xl", md: "2xl" }}
+                fontFamily={"body"}
+                fontWeight={500}
+                bgGradient="linear(to-r,yellow.400,orange.300)"
+                bgClip={"text"}
+                mt={{ base: "70px", md: "0px" }}
+                mb={{ base: "0px", md: "10px" }}
               >
-                <HStack mr={8}>
-                  <Image
-                    mt={{ base: 0, md: 0 }}
-                    mb={{ base: 3, md: 0 }}
-                    rounded={"lg"}
-                    height={{ base: 10, md: 10 }}
-                    width={{ base: "50px", md: "50px" }}
-                    objectFit={"contain"}
-                    src={"images/innl.png"}
-                  ></Image>
-                  <Text
-                    fontWeight={"medium"}
-                    bgGradient="linear(to-r,yellow.400,orange.300)"
-                    bgClip={"text"}
-                  >
-                    LinkedIn
-                  </Text>
-                </HStack>
-              </Link>
-              {/*email id */}
-              <HStack mr={8}>
-                <Image
-                  mt={{ base: 0, md: 0 }}
-                  mb={{ base: 3, md: 0 }}
-                  rounded={"lg"}
-                  height={{ base: 10, md: 10 }}
-                  width={{ base: "50px", md: "50px" }}
-                  objectFit={"contain"}
-                  src={"images/telegram.png"}
-                ></Image>
+                Contact
+              </Heading>
+            </SlideFade>
+            <SlideFade offsetY="100px" initialScale={0.1} in={enterCount > 0}>
+              <Text
+                fontSize={{ base: "sm", md: "lg" }}
+                fontFamily={"body"}
+                fontWeight={500}
+                color={fontColor}
+                mt={{ base: "0px", md: "0px" }}
+                mb={{ base: "0px", md: "10px" }}
+                textAlign={"center"}
+                px={5}
+              >
+                Get in touch with me via social media or email
+              </Text>
+            </SlideFade>
+            {/*Linkedin link */}
 
-                <Text
-                  fontWeight={"medium"}
-                  bgGradient="linear(to-r,yellow.400,orange.300)"
-                  bgClip={"text"}
+            <HStack>
+              <Flex
+                justify="center"
+                flexDirection={{ base: "column", md: "row" }}
+              >
+                <SlideFade
+                  offsetY="100px"
+                  initialScale={0.1}
+                  in={enterCount > 0}
+                  whileHover={{ scale: 1.1 }}
                 >
-                  shimna.pu@gmail.com
-                </Text>
-              </HStack>
-              {/*instagram link */}
-              <Link href={"https://www.instagram.com/quirky.shots"} isExternal>
-                <HStack mr={8}>
-                  <Image
-                    mt={{ base: 0, md: 0 }}
-                    mb={{ base: 3, md: 0 }}
-                    rounded={"lg"}
-                    height={{ base: 10, md: 10 }}
-                    width={{ base: "50px", md: "50px" }}
-                    objectFit={"contain"}
-                    src={"images/inss.png"}
-                  ></Image>
-
-                  <Text
-                    fontWeight={"medium"}
-                    bgGradient="linear(to-r,yellow.400,orange.300)"
-                    bgClip={"text"}
+                  <Link
+                    href={
+                      "https://www.linkedin.com/in/shimna-puthanayil-766727173/"
+                    }
+                    isExternal
                   >
-                    Instagram
-                  </Text>
-                </HStack>
-              </Link>
+                    <HStack mr={8}>
+                      <Image
+                        mt={{ base: 0, md: 0 }}
+                        mb={{ base: 3, md: 0 }}
+                        rounded={"lg"}
+                        height={{ base: 10, md: 10 }}
+                        width={{ base: "50px", md: "50px" }}
+                        objectFit={"contain"}
+                        src={"images/innl.png"}
+                      ></Image>
+                      <Text
+                        fontWeight={"medium"}
+                        bgGradient="linear(to-r,yellow.400,orange.300)"
+                        bgClip={"text"}
+                      >
+                        LinkedIn
+                      </Text>
+                    </HStack>
+                  </Link>
+                </SlideFade>
+
+                {/*email id */}
+                <SlideFade
+                  offsetY="100px"
+                  initialScale={0.1}
+                  in={enterCount > 0}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <HStack mr={8}>
+                    <Image
+                      mt={{ base: 0, md: 0 }}
+                      mb={{ base: 3, md: 0 }}
+                      rounded={"lg"}
+                      height={{ base: 10, md: 10 }}
+                      width={{ base: "50px", md: "50px" }}
+                      objectFit={"contain"}
+                      src={"images/telegram.png"}
+                    ></Image>
+
+                    <Text
+                      fontWeight={"medium"}
+                      bgGradient="linear(to-r,yellow.400,orange.300)"
+                      bgClip={"text"}
+                    >
+                      shimna.pu@gmail.com
+                    </Text>
+                  </HStack>
+                </SlideFade>
+                {/*instagram link */}
+                <SlideFade
+                  offsetY="100px"
+                  initialScale={0.1}
+                  in={enterCount > 0}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <Link
+                    href={"https://www.instagram.com/quirky.shots"}
+                    isExternal
+                  >
+                    <HStack mr={8}>
+                      <Image
+                        mt={{ base: 0, md: 0 }}
+                        mb={{ base: 3, md: 0 }}
+                        rounded={"lg"}
+                        height={{ base: 10, md: 10 }}
+                        width={{ base: "50px", md: "50px" }}
+                        objectFit={"contain"}
+                        src={"images/inss.png"}
+                      ></Image>
+
+                      <Text
+                        fontWeight={"medium"}
+                        bgGradient="linear(to-r,yellow.400,orange.300)"
+                        bgClip={"text"}
+                      >
+                        Instagram
+                      </Text>
+                    </HStack>
+                  </Link>
+                </SlideFade>
+              </Flex>
             </HStack>
           </VStack>
+
           <Stack
             spacing={{ base: 20, md: 8, lg: 20 }}
             direction={{ base: "column", md: "row" }}
@@ -312,121 +359,148 @@ export default function ContactPage() {
                       {/* name */}
                       <Field name="name" validate={validateName}>
                         {({ field, form }) => (
-                          <FormControl
-                            isInvalid={form.errors.name && form.touched.name}
-                            isRequired
+                          <SlideFade
+                            offsetY="100px"
+                            initialScale={0.1}
+                            in={enterCount > 0}
                           >
-                            <FormLabel color={fontColor}>Name</FormLabel>
-                            <InputGroup>
-                              <InputLeftElement>
-                                <BsPerson color="#ccd6db" />
-                              </InputLeftElement>
-                              <Input
-                                {...field}
-                                onChange={props.handleChange}
-                                onBlur={props.handleBlur}
-                                value={props.values.name || ""}
-                                placeholder="name"
-                                w={{ base: "auto", md: "500px", lg: "500px" }}
-                                color={fontColor}
-                                borderColor={borderColor}
-                                _focusVisible={{
-                                  borderColor: { borderColorOnFocus },
-                                }}
-                              />
-                            </InputGroup>
-                            <FormErrorMessage>
-                              {form.errors.name}
-                            </FormErrorMessage>
-                          </FormControl>
+                            <FormControl
+                              isInvalid={form.errors.name && form.touched.name}
+                              isRequired
+                            >
+                              <FormLabel color={fontColor}>Name</FormLabel>
+                              <InputGroup>
+                                <InputLeftElement>
+                                  <BsPerson color="#ccd6db" />
+                                </InputLeftElement>
+                                <Input
+                                  {...field}
+                                  onChange={props.handleChange}
+                                  onBlur={props.handleBlur}
+                                  value={props.values.name || ""}
+                                  placeholder="name"
+                                  w={{ base: "auto", md: "500px", lg: "500px" }}
+                                  color={fontColor}
+                                  borderColor={borderColor}
+                                  _focusVisible={{
+                                    borderColor: { borderColorOnFocus },
+                                  }}
+                                />
+                              </InputGroup>
+                              <FormErrorMessage>
+                                {form.errors.name}
+                              </FormErrorMessage>
+                            </FormControl>
+                          </SlideFade>
                         )}
                       </Field>
                       {/* email */}
                       <Field name="email" validate={validateEmailId}>
                         {({ field, form }) => (
-                          <FormControl
-                            isInvalid={form.errors.email && form.touched.email}
-                            isRequired
+                          <SlideFade
+                            offsetY="100px"
+                            initialScale={0.1}
+                            in={enterCount > 0}
                           >
-                            <FormLabel mt={2} color={fontColor}>
-                              Email
-                            </FormLabel>
+                            <FormControl
+                              isInvalid={
+                                form.errors.email && form.touched.email
+                              }
+                              isRequired
+                            >
+                              <FormLabel mt={2} color={fontColor}>
+                                Email
+                              </FormLabel>
 
-                            <InputGroup>
-                              <InputLeftElement>
-                                <MdOutlineEmail color={fontColor} />
-                              </InputLeftElement>
-                              <Input
+                              <InputGroup>
+                                <InputLeftElement>
+                                  <MdOutlineEmail color={fontColor} />
+                                </InputLeftElement>
+                                <Input
+                                  {...field}
+                                  onChange={props.handleChange}
+                                  onBlur={props.handleBlur}
+                                  value={props.values.email || ""}
+                                  placeholder="email"
+                                  color={fontColor}
+                                  borderColor={borderColor}
+                                  _focusVisible={{
+                                    borderColor: { borderColorOnFocus },
+                                  }}
+                                />
+                              </InputGroup>
+                              <FormErrorMessage>
+                                {form.errors.email}
+                              </FormErrorMessage>
+                            </FormControl>
+                          </SlideFade>
+                        )}
+                      </Field>
+                      {/* message */}
+                      <Field name="message" validate={validateMessage}>
+                        {({ field, form }) => (
+                          <SlideFade
+                            offsetY="100px"
+                            initialScale={0.1}
+                            in={enterCount > 0}
+                          >
+                            <FormControl
+                              isInvalid={
+                                form.errors.message && form.touched.message
+                              }
+                              isRequired
+                            >
+                              <FormLabel mt={2} color={fontColor}>
+                                Message
+                              </FormLabel>
+
+                              <Textarea
+                                p={2}
                                 {...field}
-                                onChange={props.handleChange}
-                                onBlur={props.handleBlur}
-                                value={props.values.email || ""}
-                                placeholder="email"
+                                value={props.values.message || ""}
+                                name="message"
+                                placeholder="Your Message"
+                                rows={6}
+                                resize="none"
+                                h={200}
                                 color={fontColor}
                                 borderColor={borderColor}
                                 _focusVisible={{
                                   borderColor: { borderColorOnFocus },
                                 }}
                               />
-                            </InputGroup>
-                            <FormErrorMessage>
-                              {form.errors.email}
-                            </FormErrorMessage>
-                          </FormControl>
+
+                              <FormErrorMessage>
+                                {form.errors.message}
+                              </FormErrorMessage>
+                            </FormControl>
+                          </SlideFade>
                         )}
                       </Field>
-                      {/* message */}
-                      <Field name="message" validate={validateMessage}>
-                        {({ field, form }) => (
-                          <FormControl
-                            isInvalid={
-                              form.errors.message && form.touched.message
-                            }
-                            isRequired
-                          >
-                            <FormLabel mt={2} color={fontColor}>
-                              Message
-                            </FormLabel>
-
-                            <Textarea
-                              p={2}
-                              {...field}
-                              value={props.values.message || ""}
-                              name="message"
-                              placeholder="Your Message"
-                              rows={6}
-                              resize="none"
-                              h={200}
-                              color={fontColor}
-                              borderColor={borderColor}
-                              _focusVisible={{
-                                borderColor: { borderColorOnFocus },
-                              }}
-                            />
-
-                            <FormErrorMessage>
-                              {form.errors.message}
-                            </FormErrorMessage>
-                          </FormControl>
-                        )}
-                      </Field>
-                      <Button
-                        mt={10}
-                        colorScheme="black"
-                        isLoading={props.isSubmitting}
-                        type="submit"
-                        bgGradient={[
-                          "linear(to-b, gray.700,gray.800,  gray.800,gray.700)",
-                        ]}
-                        color={fontColor}
-                        borderRadius="full"
-                        _hover={{
-                          bg: "gray.700",
-                        }}
-                        width="full"
+                      <SlideFade
+                        offsetY="100px"
+                        initialScale={0.1}
+                        in={enterCount > 0}
+                        whileHover={{ scale: 1.1 }}
                       >
-                        Send Message
-                      </Button>
+                        <Button
+                          mt={10}
+                          colorScheme="black"
+                          isLoading={props.isSubmitting}
+                          type="submit"
+                          bgGradient={[
+                            "linear(to-b, gray.700,gray.800,  gray.800,gray.700)",
+                          ]}
+                          color={fontColor}
+                          borderRadius="full"
+                          _hover={{
+                            bg: "gray.700",
+                          }}
+                          width="full"
+                        >
+                          Send Message
+                        </Button>
+                      </SlideFade>
                     </Form>
                   )}
                 </Formik>

@@ -24,14 +24,15 @@ export default function Navigation({ links, currentPage }) {
                 color: "yellow.400",
                 bgGradient: {
                   md: ["linear(to-b, gray.700,gray.800,  gray.800,gray.700)"],
+                  base: ["linear(to-b, gray.700,gray.800,  gray.800,gray.700)"],
                 },
+
                 bgClip: "padding-box",
                 borderRadius: "full",
               }}
             >
               {link}
             </Box>
-            //{" "}
           </BreadcrumbItem>
         ))}
       </Breadcrumb>
