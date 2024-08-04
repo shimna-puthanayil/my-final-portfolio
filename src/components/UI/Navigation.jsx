@@ -23,8 +23,8 @@ export default function Navigation({ links, currentPage }) {
                 textDecoration: "none",
                 color: "yellow.400",
                 bgGradient: {
-                  md: ["linear(to-b, gray.700,gray.800,  gray.800,gray.700)"],
-                  base: ["linear(to-b, gray.700,gray.800,  gray.800,gray.700)"],
+                  md: "linear(to-b, gray.700,gray.800,gray.800,gray.700)",
+                  base: "linear(to-b, gray.900,gray.900,gray.900,gray.900)",
                 },
 
                 bgClip: "padding-box",

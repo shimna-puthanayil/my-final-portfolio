@@ -175,20 +175,19 @@ export default function ContactPage() {
           backdropBlur="8px"
         >
           <VStack spacing={{ base: 4, md: 5, lg: 5 }}>
-            <SlideFade offsetY="100px" in={enterCount > 0}>
-              <Heading
-                ref={ref}
-                fontSize={{ base: "2xl", md: "2xl" }}
-                fontFamily={"body"}
-                fontWeight={500}
-                bgGradient="linear(to-r,yellow.400,orange.300)"
-                bgClip={"text"}
-                mt={{ base: "70px", md: "0px" }}
-                mb={{ base: "0px", md: "10px" }}
-              >
-                Contact
-              </Heading>
-            </SlideFade>
+            <Heading
+              ref={ref}
+              fontSize={{ base: "2xl", md: "2xl" }}
+              fontFamily={"body"}
+              fontWeight={500}
+              bgGradient="linear(to-r,yellow.400,orange.300)"
+              bgClip={"text"}
+              mt={{ base: "70px", md: "0px" }}
+              mb={{ base: "0px", md: "10px" }}
+            >
+              Contact
+            </Heading>
+
             <SlideFade offsetY="100px" initialScale={0.1} in={enterCount > 0}>
               <Text
                 fontSize={{ base: "sm", md: "lg" }}

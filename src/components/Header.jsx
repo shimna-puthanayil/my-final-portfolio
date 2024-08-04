@@ -33,7 +33,7 @@ export default function Header() {
           role={"group"}
           spacing="24px"
           align="center"
-          bg={"gray.800"}
+          bg={"gray.900"}
           boxSize={100}
           _groupHover={{
             before: {

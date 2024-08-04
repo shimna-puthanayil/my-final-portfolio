@@ -9,17 +9,25 @@ import {
   VStack,
   Link,
   Grid,
+  SlideFade,
 } from "@chakra-ui/react";
 
 // import resumePath from "./assets/Shimna Puthanayil - Resume.pdf";
 import resumePath from "../../pages/assets/Shimna Puthanayil - Resume.pdf";
 import skillsInfo from "../../utils/skillsInfo";
 import { useState, useEffect } from "react";
-
+import React, { useRef } from "react";
+import { useInViewport } from "react-in-viewport";
 // This function renders the section for Resume
 export default function SkillsList() {
   const fontColor = "#ccd6db";
-
+  const ref = useRef(null);
+  const { enterCount } = useInViewport(
+    ref,
+    { rootMargin: "-10px" },
+    { disconnectOnLeave: false },
+    {}
+  );
   const [skills, setSkills] = useState([]);
   const getSkills = () => {
     const skills = skillsInfo.getSkills();
@@ -74,24 +82,26 @@ export default function SkillsList() {
             >
               Skills
             </Heading>
-
-            <Grid
-              gap={1}
-              templateRows={{
-                base: "repeat(1, 1fr)",
-                md: "repeat(2, 1fr)",
-                lg: "repeat(3, 1fr)",
-              }}
-              templateColumns={{
-                base: "repeat(1, 1fr)",
-                md: "repeat(2, 1fr)",
-                lg: "repeat(3, 1fr)",
-              }}
-              pt={6}
-            >
-              {/* skills */}
-              <Skill skills={skills} />
-            </Grid>
+            <SlideFade offsetY="100px" in={enterCount > 0}>
+              <Grid
+                ref={ref}
+                gap={1}
+                templateRows={{
+                  base: "repeat(1, 1fr)",
+                  md: "repeat(2, 1fr)",
+                  lg: "repeat(3, 1fr)",
+                }}
+                templateColumns={{
+                  base: "repeat(1, 1fr)",
+                  md: "repeat(2, 1fr)",
+                  lg: "repeat(3, 1fr)",
+                }}
+                pt={6}
+              >
+                {/* skills */}
+                <Skill skills={skills} />
+              </Grid>
+            </SlideFade>
           </Box>
         </VStack>
         <Heading
