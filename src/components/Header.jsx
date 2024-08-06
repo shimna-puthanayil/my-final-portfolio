@@ -71,7 +71,7 @@ export default function Header() {
             }}
           >
             <Center
-              bg="gray.900"
+              bg="blackAlpha.900"
               h="50px"
               borderRadius="full"
               p={5}

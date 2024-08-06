@@ -11,7 +11,7 @@ const gitHubLink = "https://github.com/shimna-puthanayil";
 const linkedInLink = "https://www.linkedin.com/in/shimna-puthanayil-766727173/";
 const twitterLink = "https://twitter.com/Shimna_Anoop";
 const instagramLink = "https://www.instagram.com/quirky.shots";
-const iconColor = "yellow.400";
+const iconColor = "yellow.500";
 export default function Footer() {
   // The Footer component will render the links to github, linkedIn and Twitter
   return (

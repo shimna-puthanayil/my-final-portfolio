@@ -22,7 +22,6 @@ import {
   Image,
   Link,
   SlideFade,
-  ScaleFade,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
@@ -95,7 +94,6 @@ export default function ContactPage() {
             px={4}
             bgGradient="linear(to-b, #FFFFF0, #FFFFF0)"
             rounded={"lg"}
-            // py={2}
             pb={4}
             border="5px double #1C4532"
           >

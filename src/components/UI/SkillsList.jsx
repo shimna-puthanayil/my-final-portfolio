@@ -9,25 +9,41 @@ import {
   VStack,
   Link,
   Grid,
-  SlideFade,
+  Button,
+  keyframes,
+  Image,
 } from "@chakra-ui/react";
-
+const animation = keyframes`
+  10%, 90% {
+     transform: translate3d(-1px, 0, 0);
+   }
+   
+   20%, 80% {
+     transform: translate3d(2px, 0, 0);
+   }
+ 
+   30%, 50%, 70% {
+     transform: translate3d(-4px, 0, 0);
+   }
+ 
+   40%, 60% {
+     transform: translate3d(4px, 0, 0);
+   }
+ 
+   
+ `;
 // import resumePath from "./assets/Shimna Puthanayil - Resume.pdf";
 import resumePath from "../../pages/assets/Shimna Puthanayil - Resume.pdf";
 import skillsInfo from "../../utils/skillsInfo";
 import { useState, useEffect } from "react";
-import React, { useRef } from "react";
-import { useInViewport } from "react-in-viewport";
+import React from "react";
+
 // This function renders the section for Resume
 export default function SkillsList() {
   const fontColor = "#ccd6db";
-  const ref = useRef(null);
-  const { enterCount } = useInViewport(
-    ref,
-    { rootMargin: "-10px" },
-    { disconnectOnLeave: false },
-    {}
-  );
+  const shaking = `${animation} infinite 1s`;
+  const [isHovering, setIsHovering] = useState(false);
+
   const [skills, setSkills] = useState([]);
   const getSkills = () => {
     const skills = skillsInfo.getSkills();
@@ -82,46 +98,53 @@ export default function SkillsList() {
             >
               Skills
             </Heading>
-            <SlideFade offsetY="100px" in={enterCount > 0}>
-              <Grid
-                ref={ref}
-                gap={1}
-                templateRows={{
-                  base: "repeat(1, 1fr)",
-                  md: "repeat(2, 1fr)",
-                  lg: "repeat(3, 1fr)",
-                }}
-                templateColumns={{
-                  base: "repeat(1, 1fr)",
-                  md: "repeat(2, 1fr)",
-                  lg: "repeat(3, 1fr)",
-                }}
-                pt={6}
-              >
-                {/* skills */}
-                <Skill skills={skills} />
-              </Grid>
-            </SlideFade>
+
+            <Grid
+              gap={1}
+              templateRows={{
+                base: "repeat(1, 1fr)",
+                md: "repeat(2, 1fr)",
+                lg: "repeat(3, 1fr)",
+              }}
+              templateColumns={{
+                base: "repeat(1, 1fr)",
+                md: "repeat(2, 1fr)",
+                lg: "repeat(3, 1fr)",
+              }}
+              pt={6}
+            >
+              {/* skills */}
+              <Skill skills={skills} />
+            </Grid>
           </Box>
         </VStack>
-        <Heading
-          fontSize={{ base: "md", md: "xl" }}
-          fontFamily={"body"}
-          fontWeight={400}
-          color={fontColor}
-          mt={{ base: "-50px", md: "50px" }}
-        >
-          Download My
-          <Link
-            href={resumePath}
-            download="Resume"
-            bgGradient="linear(to-r,yellow.400,orange.300)"
-            bgClip={"text"}
-            ml={2}
+        <Link href={resumePath} download="Resume" color={fontColor} ml={2}>
+          <Button
+            mt={{ base: "200px", md: "50px" }}
+            colorScheme="black"
+            borderRadius={"full"}
+            border={"1px"}
+            borderColor={"orange.300"}
+            _hover={{
+              animation: shaking,
+            }}
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
           >
-            Resume
-          </Link>
-        </Heading>
+            <Image
+              mt={{ base: 0, md: 0 }}
+              mb={{ base: 0, md: 0 }}
+              mr={2}
+              rounded={"lg"}
+              height={{ base: 9, md: 9 }}
+              width={{ base: "20px", md: "20px" }}
+              objectFit={"contain"}
+              src={"images/down.png"}
+              _hover={{ src: "images/dw.png" }}
+            ></Image>
+            {isHovering ? "Download Resume" : "Resume"}
+          </Button>
+        </Link>
       </Box>
     </Flex>
   );

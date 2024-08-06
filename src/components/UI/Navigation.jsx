@@ -21,7 +21,7 @@ export default function Navigation({ links, currentPage }) {
               bgClip={"text"}
               _hover={{
                 textDecoration: "none",
-                color: "yellow.400",
+                color: "yellow.500",
                 bgGradient: {
                   md: "linear(to-b, gray.700,gray.800,gray.800,gray.700)",
                   base: "linear(to-b, gray.900,gray.900,gray.900,gray.900)",

@@ -1,5 +1,6 @@
 import profilePic from "../assets/images/pro-photo.jpg";
-import SkillsList from "../components/UI/SkillsList";
+
+import Resume from "../components/UI/Resume";
 //importing CHAKRA UI components
 import {
   Container,
@@ -8,13 +9,15 @@ import {
   keyframes,
   Box,
   Avatar,
-  ScaleFade,
   SlideFade,
+  VStack,
+  Flex,
 } from "@chakra-ui/react";
 //import component TextAnimation from components folder
 import TextAnimation from "../components/UI/TextAnimation";
 import React, { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
+
 //renders the 'About Me ' section
 export default function AboutPage() {
   const ref = useRef(null);
@@ -39,12 +42,12 @@ export default function AboutPage() {
   return (
     <Container
       as="main"
-      maxW="1100px"
+      maxW="1050px"
       centerContent
-      borderBottomLeftRadius={80}
-      borderBottomRightRadius={80}
+      borderRadius="3xl"
       bgGradient={["linear(to-b, black, gray.900,gray.900)"]}
-      p={{ base: 30, md: 50 }}
+      p={{ base: 30, md: 0 }}
+      pt={{ md: 50 }}
       h="container.2xl"
     >
       <Heading
@@ -88,15 +91,38 @@ export default function AboutPage() {
       </Box>
       <TextAnimation />
       <SlideFade offsetY="100px" in={enterCount > 0}>
-        <Box
+        <Flex
           ref={ref}
-          borderRadius="lg"
-          m={{ base: "auto", md: 10, lg: 0 }}
-          p={{ base: "auto", lg: 10 }}
-          align="center"
+          flexDirection={"column"}
+          alignItems={"center"}
+          justifyContent={"center"}
           w={{ base: "auto", md: "2xl", lg: "4xl" }}
+          mt={2}
+          // m={{ base: "auto", md: 10, lg: 0 }}
+          pl={{ base: 8, lg: 20 }}
+          pt={10}
+          pb={{ base: 16, md: 10 }}
+          pr={{ base: 8, lg: 20 }}
+          align="center"
+          bgColor={"gray.900"}
+          borderBottomLeftRadius={80}
+          borderBottomEndRadius={80}
+          borderTopRightRadius={80}
+          borderBottomStartRadius={80}
+          pos="relative"
+          _before={{
+            content: '""',
+            pos: "absolute",
+            top: "-100px",
+            left: 0,
+            height: "100px",
+            width: "100px",
+            borderBottomLeftRadius: "50%",
+            bgColor: "transparent",
+            boxShadow: "0 40px 0 0 #171923",
+          }}
         >
-          <Text fontSize={"lg"} mt={22} color="#ccd6db" textAlign={"start"}>
+          <Text fontSize={"lg"} mt={3} color="#ccd6db" textAlign={"start"}>
             I love coding and I am passionate about learning new technologies. I
             appreciate well designed websites which makes me spend more time on
             them. My obsession with design details helps me to create websites
@@ -106,26 +132,35 @@ export default function AboutPage() {
             backend technologies and databases which are the backbone of every
             web application.
           </Text>
-          {/* <Text
-        fontSize={"lg"}
-        mt={22}
-        color="#ccd6db"
-        textAlign={{ base: "justify", md: "justify" }}
-      >
-        I am confident of attempting development challenges using Node.js,
-        Express.js, React.js, MongoDB and Mongoose ODM, Apollo GraphQL, MySQL
-        and Sequelize ORM, Javascript, jQuery, CSS3, HTML5, Handlebars,
-        Bootstrap, Chakra UI and git.
-      </Text> */}
-
           <Text fontSize={"lg"} mt={22} color="#ccd6db" textAlign={"start"}>
             In my free time you can see me with my camera. I am a passionate
             photographer and very keen in portrait photography.
           </Text>
-        </Box>
+        </Flex>
       </SlideFade>
-      {/*Skill set */}
-      <SkillsList></SkillsList>
+      {/*Skill set and Resume*/}
+
+      <Box
+        borderRadius="3xl"
+        m={{ base: 2, md: 20, lg: 0 }}
+        p={{ base: 0, lg: 16 }}
+        mt={2}
+      >
+        <VStack
+          spacing={{ base: 4, md: 20, lg: 20 }}
+          borderRadius="3xl"
+          bgGradient={{
+            md: "linear(to-b, gray.900, gray.800,gray.800)",
+            base: "black",
+          }}
+          mt={{ base: -40, sm: -40, md: -5, lg: -8 }}
+          w={{ base: "auto", md: "2xl", lg: "4xl" }}
+          pt={0}
+          pb={10}
+        >
+          <Resume></Resume>
+        </VStack>
+      </Box>
     </Container>
   );
 }
