@@ -1,5 +1,4 @@
 import profilePic from "../assets/images/pro-photo.jpg";
-
 import Resume from "../components/UI/Resume";
 //importing CHAKRA UI components
 import {
@@ -98,7 +97,6 @@ export default function AboutPage() {
           justifyContent={"center"}
           w={{ base: "auto", md: "2xl", lg: "4xl" }}
           mt={2}
-          // m={{ base: "auto", md: 10, lg: 0 }}
           pl={{ base: 8, lg: 20 }}
           pt={10}
           pb={{ base: 16, md: 10 }}

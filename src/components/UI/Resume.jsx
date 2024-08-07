@@ -80,12 +80,14 @@ export default function Resume() {
         </Button>
       </Link>
       <Box
-        bgGradient={[
-          "linear(to-b,blackAlpha.50, blackAlpha.400, gray.800,blackAlpha.400, gray.900)",
-        ]}
+        // bgGradient={[
+        //   "linear(to-b,blackAlpha.50, blackAlpha.400, gray.800,blackAlpha.400, gray.900)",
+        // ]}
+        bg={useColorModeValue("gray.900", "gray.700")}
         borderRadius="3xl"
-        pb={8}
-        px={8}
+        pb={{ base: 16, md: 7 }}
+        pl={5}
+        pr={5}
         color={useColorModeValue("gray.700", "whiteAlpha.900")}
         shadow="base"
         w={{ base: "auto", md: "600px", lg: "800px" }}

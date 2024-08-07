@@ -6,6 +6,8 @@ import {
   HStack,
   GridItem,
   SlideFade,
+  Flex,
+  Center,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
@@ -28,11 +30,11 @@ export default function Skill({ skills }) {
           in={enterCount > -1}
           whileHover={{ scale: 1.1 }}
         >
-          <GridItem p={{ base: 0, md: 5 }} pb={{ base: 1, md: 3 }}>
+          <GridItem p={{ base: 5, md: 5 }} pb={{ base: 5, md: 10 }}>
             <Box
               ref={ref}
               role={"group"}
-              height="auto"
+              height="50px"
               borderTopLeftRadius={40}
               borderBottomRightRadius={40}
               _groupHover={{
@@ -40,21 +42,22 @@ export default function Skill({ skills }) {
                   filter: "blur(100px)",
                 },
               }}
-              boxShadow={"2xl"}
+              boxShadow={"sm"}
               pos={"relative"}
               zIndex={1}
             >
               <Box
                 pos={"relative"}
-                w={{ base: 200, sm: 200 }}
+                w={{ base: 250, sm: 200 }}
                 _after={{
                   transition: "all .4s ease",
                   content: '""',
-                  w: "97%",
-                  h: "75%",
+                  w: { base: "90%", md: "97%" },
+                  h: { base: "80%", md: "80%" },
+
                   pos: "absolute",
                   top: 2,
-                  left: 1,
+                  left: { base: 3, md: 1 },
                   background: `url("images/wb.png") center/contain`,
                   filter: "blur(10px)",
                   zIndex: -1,
@@ -68,24 +71,26 @@ export default function Skill({ skills }) {
                   },
                 }}
               >
-                <Box
-                  w={{ base: 200, sm: 200 }}
+                <Flex
+                  w={{ base: 220, sm: 200 }}
+                  h={{ base: 20, md: 70 }}
                   borderTopLeftRadius={40}
                   borderBottomRightRadius={40}
                   bgGradient={[
                     "linear(to-b, gray.900, gray.800,gray.700, gray.800, gray.900)",
                   ]}
                   color={"#ccd6db"}
-                  p={5}
-                  align="center"
+                  p={6}
+                  pl={10}
+                  justifyContent={"flex-start"}
                 >
                   <HStack align={"center"}>
                     <Image
                       mt={{ base: 0, md: 0 }}
                       mb={{ base: 3, md: 0 }}
                       rounded={"lg"}
-                      height={{ base: 8, md: 8 }}
-                      width={{ base: "40px", md: "40px" }}
+                      height={{ base: 6, md: 8 }}
+                      width={{ base: "30px", md: "30px" }}
                       objectFit={"contain"}
                       src={skill.split(",")[1]}
                     ></Image>
@@ -93,7 +98,7 @@ export default function Skill({ skills }) {
                       {skill.split(",")[0]}
                     </Text>
                   </HStack>
-                </Box>
+                </Flex>
               </Box>
             </Box>
           </GridItem>

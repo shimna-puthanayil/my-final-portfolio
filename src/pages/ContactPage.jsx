@@ -492,6 +492,7 @@ export default function ContactPage() {
                           borderRadius="full"
                           _hover={{
                             bg: "gray.700",
+                            color: "yellow.500",
                           }}
                           width="full"
                         >

@@ -73,13 +73,13 @@ export default function SkillsList() {
           mt={{ base: 0, md: 120, lg: 50 }}
           w={{ base: "auto", md: "2xl", lg: "4xl" }}
           pt={10}
-          pb={12}
+          
         >
           <Box
             bg={useColorModeValue("gray.900", "gray.700")}
             borderRadius="3xl"
             pb={8}
-            px={8}
+          
             color={useColorModeValue("gray.700", "whiteAlpha.900")}
             shadow="base"
             w={{ base: "auto", md: "600px", lg: "800px" }}

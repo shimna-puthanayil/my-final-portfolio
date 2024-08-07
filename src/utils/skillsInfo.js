@@ -15,8 +15,8 @@ const getSkills = () => {
     "Node,images/njs.png",
     "Express,images/e.webp",
     "APIs,images/api.png",
-    "MySQL Sequalize,images/my.png",
-    "MongoDB Mongoose,images/mong.png",
+    "MySQL,images/my.png",
+    "MongoDB ,images/mong.png",
     "GraphQL,images/grr.webp",
     //others
     "AWS S3 & EC2,images/aws.png",

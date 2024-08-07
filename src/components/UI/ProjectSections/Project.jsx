@@ -182,7 +182,7 @@ export default function Project({
                     fontSize="20px"
                     icon={<FaGithub />}
                     _hover={{
-                      color: "rgb(217, 185, 121)",
+                      color: "yellow.500",
                       fontSize: { base: "20px", md: "24px" },
                     }}
                   />
