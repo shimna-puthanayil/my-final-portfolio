@@ -158,11 +158,7 @@ export default function Project({
                 ))}
               </Wrap>
 
-              <Divider
-                borderColor="gray.600"
-                // mt={{ base: 0, sm: 4, md: 4, lg: 4 }}
-                mb={{ base: 1, md: 1 }}
-              />
+              <Divider borderColor="gray.600" mb={{ base: 1, md: 1 }} />
 
               <Box
                 h="40px"

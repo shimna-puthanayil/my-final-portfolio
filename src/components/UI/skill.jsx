@@ -11,23 +11,33 @@ import {
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
+import { isMobile } from "react-device-detect";
+
 //this component will be used to render the skill section inside 'Resume ' section
 export default function Skill({ skills }) {
   const ref = useRef(null);
+
   const { enterCount } = useInViewport(
     ref,
-    { rootMargin: "500px" },
+    { rootMargin: "1600px" },
     { disconnectOnLeave: false },
     {}
   );
+  let offset;
+  if (isMobile) {
+    offset = 100;
+  } else {
+    offset = 1100;
+  }
   //iterates through each skill
+
   return (
     <>
       {skills.map((skill, i) => (
         <SlideFade
-          offsetY="40px"
+          offsetY={offset}
           initialScale={0.1}
-          in={enterCount > -1}
+          in={enterCount > 0}
           whileHover={{ scale: 1.1 }}
         >
           <GridItem p={{ base: 5, md: 5 }} pb={{ base: 5, md: 10 }}>

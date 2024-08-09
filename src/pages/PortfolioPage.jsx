@@ -13,7 +13,6 @@ import Project from "../components/UI/ProjectSections/Project";
 import projectsInfo from "../utils/projectsInfo";
 
 export default function PortfolioPage() {
-  const fontColor = "rgb(217, 185, 121)";
   //  react hooks
 
   const [projects, setProjects] = useState([]);

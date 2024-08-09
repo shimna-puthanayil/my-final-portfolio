@@ -89,7 +89,7 @@ export default function AboutPage() {
         />
       </Box>
       <TextAnimation />
-      <SlideFade offsetY="100px" in={enterCount > 0}>
+      <SlideFade offsetY="300px" in={enterCount > 0}>
         <Flex
           ref={ref}
           flexDirection={"column"}
