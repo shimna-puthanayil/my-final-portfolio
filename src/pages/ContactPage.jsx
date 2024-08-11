@@ -149,7 +149,7 @@ export default function ContactPage() {
           bottom: 0,
           borderBottomLeftRadius: 80,
           borderTopRightRadius: 80,
-          opacity: 0.25,
+          opacity: 0.2,
         },
       }}
     >
