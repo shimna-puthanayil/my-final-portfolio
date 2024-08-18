@@ -44,7 +44,6 @@ export default function PortfolioPage() {
           >
             Portfolio
           </Heading>
-
           <Divider orientation="horizontal" mt={5} borderColor="gray.600" />
           <SimpleGrid columns={[1, null, 2]} spacing={8}>
             {projects.map((project, i) => (

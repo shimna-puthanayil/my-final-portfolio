@@ -19,6 +19,13 @@ const getProjects = () => {
         "images/js.png",
         "images/aws.png",
       ],
+      loginDetails: [
+        "Tenant/tenant@testmail.com/",
+        "Agent/agent@testmail.com/",
+        "Owner/owner@testmail.com/",
+        "Admin/admin@testmail.com/",
+        "12345678",
+      ],
     },
     {
       name: "SparkShopper",
@@ -36,6 +43,7 @@ const getProjects = () => {
         "images/graph.png",
         "images/stripe.png",
       ],
+      loginDetails: ["guest@testmail.com/guest12345"],
     },
 
     {
@@ -43,7 +51,7 @@ const getProjects = () => {
       url: "images/rb.jpeg",
       deploymentLink: "https://recipe--box-a54e92522d3b.herokuapp.com/",
       description:
-        "RecipeBox is a user-friendly platform designed to bridge the gap between food enthusiasts and professional chefs. This project followed the MVC paradigm in its architectural structure",
+        "RecipeBox is a user-friendly platform designed to bridge the gap between food enthusiasts and professional chefs. This project followed the MVC paradigm in its architectural structure.     ",
       gitHubLink: "https://github.com/J-D-garwood/recipe-forum",
       technologies: [
         "images/no.png",
@@ -53,6 +61,10 @@ const getProjects = () => {
         "images/bs.jpeg",
         "images/jquery.png",
         "images/js.png",
+      ],
+      loginDetails: [
+        "lernantino@gmail.com/password12345",
+        "sal@hotmail.com/password12345",
       ],
     },
     {
@@ -70,13 +82,14 @@ const getProjects = () => {
         "images/cc.png",
         "images/html.png",
       ],
+      loginDetails: [],
     },
     {
       name: "Portfolio",
       url: "images/portfolio.jpeg",
       deploymentLink: "https://shimna-puthanayil.netlify.app/",
       description:
-        "This application is a single-page application portfolio built using React for web developers to create a captivating showcase for their work.",
+        "This application is a single-page application portfolio built using React for web developers to create a captivating showcase for their work. ",
       gitHubLink: "https://github.com/shimna-puthanayil/my-final-portfolio",
       technologies: [
         "images/rr1.png",
@@ -85,6 +98,7 @@ const getProjects = () => {
         "images/js.png",
         "images/emailjs.webp",
       ],
+      loginDetails: [],
     },
     {
       name: "TechBlog",
@@ -101,6 +115,10 @@ const getProjects = () => {
         "images/h.png",
         "images/bs.jpeg",
         "images/js.png",
+      ],
+      loginDetails: [
+        "lernantino@gmail.com/password12345",
+        "sal@hotmail.com/password12345",
       ],
     },
   ];
