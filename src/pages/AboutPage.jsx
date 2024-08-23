@@ -1,4 +1,3 @@
-import profilePic from "../assets/images/pro-photo.jpg";
 import Resume from "../components/UI/Resume";
 //importing CHAKRA UI components
 import {
@@ -16,7 +15,7 @@ import {
 import TextAnimation from "../components/UI/TextAnimation";
 import React, { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
-
+let profilePic = import.meta.env.VITE_PROFILEPIC_PATH;
 //renders the 'About Me ' section
 export default function AboutPage() {
   const ref = useRef(null);
