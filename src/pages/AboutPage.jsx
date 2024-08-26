@@ -7,6 +7,7 @@ import {
   keyframes,
   Box,
   Avatar,
+  Image,
   SlideFade,
   VStack,
   Flex,
@@ -16,6 +17,7 @@ import TextAnimation from "../components/UI/TextAnimation";
 import React, { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
 let profilePic = import.meta.env.VITE_PROFILEPIC_PATH;
+
 //renders the 'About Me ' section
 export default function AboutPage() {
   const ref = useRef(null);
@@ -64,27 +66,31 @@ export default function AboutPage() {
         position="relative"
         w={size}
         h={size}
-        top={5}
+        top={{ md: 5 }}
         _before={{
           content: "''",
           position: "relative",
           display: "block",
-          width: "150%",
-          height: "150%",
+          width: "120%",
+          height: "140%",
           boxSizing: "border-box",
-          marginLeft: "-25%",
-          marginTop: "-25%",
-          borderRadius: "50%",
+          marginLeft: "-10%",
+          marginTop: "-20%",
+          borderTopLeftRadius: "50%",
+          borderTopEndRadius: "50%",
           bgColor: color,
           animation: `2.25s ${pulseRing} cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite`,
         }}
       >
-        <Avatar
+        <Image
           src={profilePic}
           size="full"
           alt="Profile photo"
           position="absolute"
-          top={0}
+          top={{ base: -35, md: -19 }}
+          borderTopLeftRadius="50%"
+          borderTopEndRadius="50%"
+          border={"gray"}
         />
       </Box>
       <TextAnimation />

@@ -39,6 +39,7 @@ export default function Skill({ skills }) {
           initialScale={0.1}
           in={enterCount > 0}
           whileHover={{ scale: 1.1 }}
+          key={i}
         >
           <GridItem p={{ base: 5, md: 5 }} pb={{ base: 5, md: 10 }}>
             <Box
