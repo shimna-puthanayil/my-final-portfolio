@@ -87,7 +87,7 @@ export default function AboutPage() {
           size="full"
           alt="Profile photo"
           position="absolute"
-          top={{ base: -35, md: -19 }}
+          top={{ base: -25, md: -19 }}
           borderTopLeftRadius="50%"
           borderTopEndRadius="50%"
           border={"gray"}
