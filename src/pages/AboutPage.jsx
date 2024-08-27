@@ -108,7 +108,7 @@ export default function AboutPage() {
           pr={{ base: 8, lg: 20 }}
           align="center"
           bgColor={"gray.900"}
-          borderBottomLeftRadius={80}
+          bgGradient={["linear(to-b, gray.900,blackAlpha.300,blackAlpha.50)"]}
           borderBottomEndRadius={80}
           borderTopRightRadius={80}
           borderBottomStartRadius={80}
@@ -126,18 +126,39 @@ export default function AboutPage() {
           }}
         >
           <Text fontSize={"lg"} mt={3} color="#ccd6db" textAlign={"start"}>
-            I love coding and I am passionate about learning new technologies. I
-            appreciate well designed websites which makes me spend more time on
-            them. My obsession with design details helps me to create websites
-            that are appealing to the end users. I embed responsiveness in all
-            of my work because I believe a user should be able to experience the
-            application regardless of the device. I am equally interested in
-            backend technologies and databases which are the backbone of every
-            web application.
+            Hi, my name is Shimna Puthanayil and I’m an aspiring full stack
+            developer based in Sydney, Australia with a keen interest in
+            creating complete, user-friendly web applications. With a recent
+            certificate in full stack development from the University of Sydney,
+            I’m eager to apply my skills and start making a real impact.
+          </Text>
+          <Text fontSize={"lg"} mt={3} color="#ccd6db" textAlign={"start"}>
+            I’ve gained hands-on experience in both front-end and back-end
+            development. My approach focuses on building solutions that are not
+            only visually appealing but also user-centric, efficient and
+            responsive. I am equally interested in backend technologies and
+            databases which are the backbone of every web application.
           </Text>
           <Text fontSize={"lg"} mt={22} color="#ccd6db" textAlign={"start"}>
-            In my free time you can see me with my camera. I am a passionate
-            photographer and very keen in portrait photography.
+            Although I’m just starting out, I’ve already worked on several group
+            and individual projects, including this portfolio site, where I’ve
+            applied my knowledge and developed my problem-solving skills. I’m
+            passionate about continuous learning and always on the lookout for
+            new challenges to expand my expertise.
+          </Text>
+
+          <Text fontSize={"lg"} mt={3} color="#ccd6db" textAlign={"start"}>
+            Outside of coding, I’m a photographer, which helps fuel my
+            creativity. Whether it’s through color schemes or innovative design
+            elements, I strive to bring a unique perspective to every project.
+            I’m enthusiastic about combining my love for technology with my
+            creative side to build impactful digital solutions.
+          </Text>
+          <Text fontSize={"lg"} mt={3} color="#ccd6db" textAlign={"start"}>
+            I’m currently looking for opportunities to collaborate on projects,
+            gain hands-on experience and contribute to a team. Feel free to
+            explore my portfolio and reach out if you’d like to connect or
+            discuss potential opportunities!
           </Text>
         </Flex>
       </SlideFade>
