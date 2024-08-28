@@ -108,7 +108,9 @@ export default function AboutPage() {
           pr={{ base: 8, lg: 20 }}
           align="center"
           bgColor={"gray.900"}
-          bgGradient={["linear(to-b, gray.900,blackAlpha.300,blackAlpha.50)"]}
+          bgGradient={[
+            "linear(to-b, gray.900,blackAlpha.300,blackAlpha.300,gray.800)",
+          ]}
           borderBottomEndRadius={80}
           borderTopRightRadius={80}
           borderBottomStartRadius={80}
