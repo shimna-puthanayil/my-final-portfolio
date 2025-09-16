@@ -1,8 +1,8 @@
 //importing CHAKRA UI components
-import { Box, Container, keyframes, HStack, VStack } from "@chakra-ui/react";
+import { Box, Container, HStack, VStack } from "@chakra-ui/react";
 //import motion for animation
 import { motion } from "framer-motion";
-
+import { keyframes } from "@emotion/react";
 const animationKeyframes = keyframes`
 0%,40%,100%{
   transform:translateY(0);

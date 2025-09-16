@@ -5,14 +5,12 @@ import {
   Box,
   Heading,
   useColorModeValue,
-  Link,
   Grid,
   Button,
   Image,
-  keyframes,
 } from "@chakra-ui/react";
-
-import resumePath from "../../pages/assets/Shimna Puthanayil - Resume.pdf";
+import { keyframes } from "@emotion/react";
+// import resumePath from "../../pages/assets/Shimna Puthanayil - Resume.pdf";
 
 import skillsInfo from "../../utils/skillsInfo";
 import { useState, useEffect } from "react";
@@ -52,33 +50,40 @@ export default function Resume() {
 
   return (
     <>
-      <Link href={resumePath} download="Resume" color={fontColor} ml={2}>
-        <Button
-          mt={{ base: "200px", md: "0px" }}
-          colorScheme="black"
-          borderRadius={"full"}
-          border={"1px"}
-          borderColor={"orange.300"}
-          _hover={{
-            animation: shaking,
-          }}
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
-        >
-          <Image
-            mt={{ base: 0, md: 0 }}
-            mb={{ base: 0, md: 0 }}
-            mr={2}
-            rounded={"lg"}
-            height={{ base: 9, md: 9 }}
-            width={{ base: "20px", md: "20px" }}
-            objectFit={"contain"}
-            src={"images/down.png"}
-            _hover={{ src: "images/dw.png" }}
-          ></Image>
-          {isHovering ? "Download Resume" : "Resume"}
-        </Button>
-      </Link>
+      {/* 
+      <Link href={resumePath} download="Resume" color={fontColor} ml={2}>*/}
+      <Button
+        mt={{ base: "200px", md: "0px" }}
+        colorScheme="black"
+        borderRadius={"full"}
+        border={"1px"}
+        borderColor={"orange.300"}
+        _hover={{
+          animation: shaking,
+        }}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        onClick={() => {
+          window.open(
+            "https://drive.google.com/file/d/12JH_8L284XGwAQltU8g7t9kueRZx-FmQ/view?usp=sharing",
+            "_blank"
+          );
+        }}
+      >
+        <Image
+          mt={{ base: 0, md: 0 }}
+          mb={{ base: 0, md: 0 }}
+          mr={2}
+          rounded={"lg"}
+          height={{ base: 9, md: 9 }}
+          width={{ base: "20px", md: "20px" }}
+          objectFit={"contain"}
+          src={"images/down.png"}
+          _hover={{ src: "images/dw.png" }}
+        ></Image>
+        {isHovering ? "Download Resume" : "Resume"}
+      </Button>
+      {/*   </Link>*/}
       <Box
         // bgGradient={[
         //   "linear(to-b,blackAlpha.50, blackAlpha.400, gray.800,blackAlpha.400, gray.900)",

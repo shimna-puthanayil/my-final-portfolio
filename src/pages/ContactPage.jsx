@@ -3,15 +3,11 @@ import { Field, Form, Formik } from "formik";
 //importing CHAKRA UI components
 import {
   Box,
-  FormErrorMessage,
   Button,
   Flex,
-  FormControl,
-  FormLabel,
   Heading,
   Input,
   InputGroup,
-  InputLeftElement,
   Stack,
   Textarea,
   useColorModeValue,
@@ -22,7 +18,17 @@ import {
   Image,
   Link,
   SlideFade,
+  FormControl,
+  FormErrorMessage,
+  FormLabel,
+  InputLeftElement,
 } from "@chakra-ui/react";
+// import { InputLeftElement } from "@chakra-ui/input";
+// import {
+//   FormControl,
+//   FormErrorMessage,
+//   FormLabel,
+// } from "@chakra-ui/form-control";
 import React, { useRef } from "react";
 import { useInViewport } from "react-in-viewport";
 // Importing  icons
@@ -327,10 +333,13 @@ export default function ContactPage() {
                       actions.setSubmitting(false);
                     }, 1000);
 
-                    const serviceId = "service_tl4o2cr";
-                    const templateId = "template_in6xf2c";
+                    const serviceId = "service_9u5ciyr";
+                    const templateId = "template_4iecb49";
 
                     //sends message to the given email id using emailjs
+                    console.log(values.message);
+                    console.log(values.name);
+                    console.log(values.email);
                     emailjs
                       .send(serviceId, templateId, {
                         message: values.message,
@@ -338,6 +347,8 @@ export default function ContactPage() {
                         email: values.email,
                       })
                       .then((res) => {
+                        console.log("hia");
+
                         //sets the success to true
                         setSuccess(true);
                         actions.resetForm();

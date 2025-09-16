@@ -4,7 +4,6 @@ import {
   Container,
   Heading,
   Text,
-  keyframes,
   Box,
   Avatar,
   Image,
@@ -12,6 +11,7 @@ import {
   VStack,
   Flex,
 } from "@chakra-ui/react";
+import { keyframes } from "@emotion/react";
 //import component TextAnimation from components folder
 import TextAnimation from "../components/UI/TextAnimation";
 import React, { useRef } from "react";
@@ -94,7 +94,7 @@ export default function AboutPage() {
         />
       </Box>
       <TextAnimation />
-      <SlideFade offsetY="300px" in={enterCount > 0}>
+      <SlideFade offsetY="100px" initialScale={0.1} in={enterCount > 0}>
         <Flex
           ref={ref}
           flexDirection={"column"}
@@ -130,7 +130,7 @@ export default function AboutPage() {
           <Text fontSize={"lg"} mt={3} color="#ccd6db" textAlign={"start"}>
             Hi, my name is Shimna Puthanayil and I’m an aspiring full stack
             developer based in Sydney, Australia with a keen interest in
-            creating complete, user-friendly web applications. With a recent
+            creating complete, user-friendly web applications. With a
             certificate in full stack development from the University of Sydney,
             I’m eager to apply my skills and start making a real impact.
           </Text>

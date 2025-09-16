@@ -113,18 +113,18 @@ export default function Project({
                   },
                 }}
               >
-                <Link href={deploymentLink} isExternal>
-                  <Image
-                    mt={73}
-                    rounded={"lg"}
-                    height={257}
-                    width={500}
-                    objectFit={"cover"}
-                    objectPosition={"left bottom"}
-                    src={url}
-                    alt="Project Photos"
-                  />
-                </Link>
+                {/*    <Link href={deploymentLink} isExternal>    */}
+                <Image
+                  mt={73}
+                  rounded={"lg"}
+                  height={257}
+                  width={500}
+                  objectFit={"cover"}
+                  objectPosition={"left bottom"}
+                  src={url}
+                  alt="Project Photos"
+                />
+                {/*  </Link>*/}
               </Flex>
             </ScaleFade>
             <VStack
@@ -149,6 +149,7 @@ export default function Project({
                       trigger="hover"
                       openDelay={300}
                     >
+                      {/*
                       <PopoverTrigger>
                         <Link
                           fontSize={"md"}
@@ -158,7 +159,9 @@ export default function Project({
                         >
                           Guest login....
                         </Link>
+                     
                       </PopoverTrigger>
+                         */}
                       <Box zIndex="popover" w="100%" h="100%">
                         <PopoverContent
                           color={fontColor}
