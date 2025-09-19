@@ -337,9 +337,7 @@ export default function ContactPage() {
                     const templateId = "template_4iecb49";
 
                     //sends message to the given email id using emailjs
-                    console.log(values.message);
-                    console.log(values.name);
-                    console.log(values.email);
+
                     emailjs
                       .send(serviceId, templateId, {
                         message: values.message,
@@ -347,8 +345,6 @@ export default function ContactPage() {
                         email: values.email,
                       })
                       .then((res) => {
-                        console.log("hia");
-
                         //sets the success to true
                         setSuccess(true);
                         actions.resetForm();
